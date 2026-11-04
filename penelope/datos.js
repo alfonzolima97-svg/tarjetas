@@ -9,8 +9,8 @@ window.TARJETA = {
   whatsapp: "525639299007",
   mensajeWhatsapp: "Hola, me gustaría agendar una sesión de prueba o inicio",
 
-  tituloServicios: "Terapias & Sesiones",
-  iconoServicios: "fas fa-spa",
+  tituloServicios: " PSICOTERAPIA ",
+  iconoServicios: "fa-sharp-duotone fa-solid fa-trillium",
   servicios: [
     { nombre: "Sesión de Reiki (Sanación Energética)", descripcion: "Armonización de chakras y relajación profunda (60 min).", precio: "$500" },
     { nombre: "Barras de Access Consciousness", descripcion: "Liberación de creencias limitantes y estrés mental.", precio: "$750" },
