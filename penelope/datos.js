@@ -8,7 +8,7 @@ window.TARJETA = {
   },
   descripcion: "Más de 10 años acompañando a mujeres a fortalecer su autonomía, seguridad y confianza.",
   foto: "foto.jpg",
-  agendaAbierta: false,
+  agendaAbierta: true,
 
   // Número tomado del flyer: +52 56 3939 9007
   telefono: "5639399007",
