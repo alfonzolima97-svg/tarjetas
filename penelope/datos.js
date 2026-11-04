@@ -12,14 +12,13 @@ window.TARJETA = {
   tituloServicios: " PSICOTERAPIA ",
   iconoServicios: "fa-sharp-duotone fa-solid fa-trillium",
   servicios: [
-    { nombre: "Sesión de Reiki (Sanación Energética)", descripcion: "Armonización de chakras y relajación profunda (60 min).", precio: "$500" },
-    { nombre: "Barras de Access Consciousness", descripcion: "Liberación de creencias limitantes y estrés mental.", precio: "$750" },
-    { nombre: "Terapia Holística Integral", descripcion: "Combinación personalizada de reiki, aromaterapia y péndulo.", precio: "$900" }
+    { nombre: "Sesión Individual", descripcion: "Un espacio de escucha sin juicios para comprenderte y construir herramientas para tu día a día.", precio: "$555 MXN" },
+    { nombre: "Paquete de 5 Sesiones", descripcion: "Sesiones semanales o quincenales.", precio: "$2,222 MXN" },
+  //  { nombre: "Terapia Holística Integral", descripcion: "Combinación personalizada de reiki, aromaterapia y péndulo.", precio: "$900" }
   ],
 
   enlaces: [
-    // PENDIENTE: agregar aquí el Instagram real de Penélope, con este formato:
-    // { texto: "Reflexiones en Instagram", url: "https://instagram.com/SU_USUARIO", icono: "fab fa-instagram", color: "#e4405f" },
+    { texto: "Reflexiones en Instagram", url: "https://www.instagram.com/penelope.magiaycaos?vrfl=NXVubHpnOXNkdnI2", icono: "fab fa-instagram", color: "#e4405f" },
     { texto: "Comunidad en Facebook", url: "https://www.facebook.com/profile.php?id=100064049319044", icono: "fab fa-facebook", color: "#1877f2" }
   ],
 
