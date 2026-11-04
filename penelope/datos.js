@@ -14,7 +14,7 @@ window.TARJETA = {
   codigoPais: "52",
   telefono: "5639399007",
   whatsapp: "5639399007",
-  llamar: true,                        // true = muestra el botón Llamar, false = lo oculta
+  llamar: false,                        // true = muestra el botón Llamar, false = lo oculta
   textoWhatsapp: "Agenda por WhatsApp",
   subtextoWhatsapp: "+52 56 3939 9007",
   mensajeWhatsapp: "Hola Penélope, me gustaría agendar una sesión.",
@@ -34,13 +34,6 @@ window.TARJETA = {
       cinta: "Precio especial",
       descripcion: "Sesiones semanales o quincenales.",
       precio: "$2,222 MXN"
-    },
-    {
-      icono: "fas fa-moon",
-      nombre: "Expansión femenina",
-      descripcion: "21 días hábiles de trabajo de estructura interna con audios guiados y ejercicios.",
-      extra: "Reconoce patrones, conecta con tus deseos y elige con mayor claridad.",
-      precio: "$2,222 MXN"
     }
   ],
   nota: { icono: "far fa-calendar", texto: "Tu cita se confirma con el pago total anticipado." },
@@ -48,7 +41,8 @@ window.TARJETA = {
   // OJO: entre un bloque { } y el siguiente va una COMA (la última no lleva)
   enlaces: [
     { texto: "@penelope.magiaycaos", url: "https://instagram.com/penelope.magiaycaos", icono: "fab fa-instagram", color: "#e4405f" },
-    { texto: "Comunidad en Facebook", url: "https://www.facebook.com/profile.php?id=100064049319044", icono: "fab fa-facebook", color: "#1877f2" }
+    { texto: "Comunidad en Facebook", url: "https://www.facebook.com/profile.php?id=100064049319044", icono: "fab fa-facebook", color: "#1877f2" },
+    { texto: "Agenda tu cita", url: "https://www.facebook.com/profile.php?id=100064049319044", icono: "fab fa-calenda", color: "#1877f2" }
   ],
 
   pie: "Penélope  |  Magia & Caos",
