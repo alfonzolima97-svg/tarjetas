@@ -110,7 +110,8 @@
   // Servicios
   if (d.servicios && d.servicios.length) {
     const items = d.servicios.map((s) => `
-      <div class="service-item${s.destacado ? ' featured' : ''}">
+      <div class="service-item${s.destacado ? ' featured' : ''}${s.cinta ? ' con-cinta' : ''}">
+        ${s.cinta ? `<span class="service-ribbon">${esc(s.cinta)}</span>` : ''}
         ${s.icono ? `<span class="service-icon"><i class="${esc(s.icono)}"></i></span>` : ''}
         <div class="service-info">
           <span class="service-name">${esc(s.nombre)}</span>
