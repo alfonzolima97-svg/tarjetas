@@ -5,10 +5,11 @@
    no hace falta tocar este archivo para personalizar.
    ========================================================== */
 
-:root {
-  --bg-gradient: linear-gradient(135deg, #f3e8ff 0%, #e0e7ff 100%);
-  --banner-gradient: linear-gradient(135deg, #9333ea 0%, #c084fc 100%);
-  --card-bg: rgba(255, 255, 255, 0.97);
+ :root {
+  /* ===== UN SOLO COLOR: tema.principal en datos.js =====
+     Todo lo demás (textos suaves, fondos, bordes, efecto al pasar el cursor,
+     banner, botón oscuro) se calcula a partir de él. Los valores de abajo son
+     el respaldo para navegadores muy antiguos. */
   --primary: #9333ea;
   --text-main: #1e1b4b;
   --text-muted: #5b21b6;
@@ -16,10 +17,29 @@
   --surface-hover: #f3e8ff;
   --tag-bg: #ede9fe;
   --border-color: #ddd6fe;
+  --bg-gradient: linear-gradient(135deg, #f3e8ff 0%, #e0e7ff 100%);
+  --banner-gradient: linear-gradient(135deg, #9333ea 0%, #c084fc 100%);
   --dark-btn: #1e1b4b;
   --dark-btn-hover: #312e81;
+  --card-bg: rgba(255, 255, 255, 0.97);
   --whatsapp: #25d366;
   --whatsapp-hover: #22c55e;
+}
+
+@supports (color: color-mix(in oklab, red, blue)) {
+  :root {
+    --text-main: color-mix(in oklab, var(--primary) 22%, #000);
+    --text-muted: color-mix(in oklab, var(--primary) 62%, #000);
+    --surface: color-mix(in oklab, var(--primary) 6%, #fff);
+    --surface-hover: color-mix(in oklab, var(--primary) 16%, #fff);
+    --tag-bg: color-mix(in oklab, var(--primary) 14%, #fff);
+    --border-color: color-mix(in oklab, var(--primary) 26%, #fff);
+    --bg-gradient: linear-gradient(135deg, color-mix(in oklab, var(--primary) 14%, #fff) 0%, color-mix(in oklab, var(--primary) 6%, #fff) 100%);
+    --banner-gradient: linear-gradient(135deg, var(--primary) 0%, color-mix(in oklab, var(--primary) 60%, #fff) 100%);
+    --dark-btn: color-mix(in oklab, var(--primary) 30%, #000);
+    --dark-btn-hover: color-mix(in oklab, var(--primary) 45%, #000);
+  
+}
 }
 
 * {
