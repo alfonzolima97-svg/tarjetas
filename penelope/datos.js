@@ -13,7 +13,7 @@ window.TARJETA = {
   // Número tomado del flyer: +52 56 3939 9007
   telefono: "5639399007",
   whatsapp: "5639399007",
-  llamar: false,                       // true = muestra también el botón Llamar
+  llamar: true,                       // true = muestra también el botón Llamar
   textoWhatsapp: "Agenda por WhatsApp",
   subtextoWhatsapp: "56 3939 9007",
   mensajeWhatsapp: "Hola Penélope, me gustaría agendar una sesión.",
