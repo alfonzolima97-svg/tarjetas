@@ -23,7 +23,7 @@ window.TARJETA = {
   servicios: [
     { nombre: "Tarjeta Digital Basica.", descripcion: "Se genera una tarjeta digitalm con diseños y estructura basica.(sin cambios mensuales, incuye dominio y hosting gratis)", precio: "$299" },
     { nombre: "Targeta Digital Ejecutiva.", descripcion: "Se genera una tarjeta digital con diseños y estructuras mas avanzadas, integracion de mapa.(incluye 1 cambio mensual, dominio y hosting gratis)", precio: "$499" },
-    { nombre: "Pagina Web", descripcion: "Creacion de su pagina web para aumentar el alcance de su negocio.", precio: "Desde $2999" }
+    { nombre: "Pagina Web", descripcion: "Creacion de su pagina web para aumentar el alcance de su negocio.", precio: "Desde $1899" }
   ],
 
   enlaces: [
@@ -38,7 +38,7 @@ window.TARJETA = {
   },
 
   // Escribe la dirección tal como la buscarías en Google Maps. Bórrala si no hay local.
-  direccion: "Calle y número, Colonia, Ciudad, País",
+  // direccion: "Calle y número, Colonia, Ciudad, País",
 
   pie: "Tarjeta Digital Interactiva",
 
