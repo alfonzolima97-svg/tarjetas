@@ -30,7 +30,7 @@ window.TARJETA = {
     {
       icono: "fas fa-leaf",
       nombre: "Paquete de 5 sesiones",
-      etiqueta: "Precio especial",
+      cinta: "Precio especial",
       descripcion: "Sesiones semanales o quincenales.",
       precio: "$2,222 MXN"
     }
