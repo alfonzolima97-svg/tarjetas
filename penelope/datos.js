@@ -10,7 +10,7 @@ window.TARJETA = {
   mensajeWhatsapp: "Hola, me gustaría agendar una sesión de prueba o inicio",
 
   tituloServicios: " PSICOTERAPIA ",
-  iconoServicios: "fa-sharp-duotone fa-solid fa-trillium",
+  iconoServicios: "fas fa-sharp-duotone fa-solid fa-trillium",
   servicios: [
     { nombre: "Sesión Individual", descripcion: "Un espacio de escucha sin juicios para comprenderte y construir herramientas para tu día a día.", precio: "$555 MXN" },
     { nombre: "Paquete de 5 Sesiones", descripcion: "Sesiones semanales o quincenales.", precio: "$2,222 MXN" },
