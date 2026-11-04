@@ -44,7 +44,6 @@ window.TARJETA = {
 
   // Colores opcionales. Bórralos para usar el morado por defecto.
   tema: {
-    principal: "#57A7FF",
-    banner: "linear-gradient(135deg, #57A7FF 0%, #C7E2FF 100%)"
+    principal: "#57A7FF"
   }
 };
