@@ -33,6 +33,14 @@ window.TARJETA = {
       etiqueta: "Precio especial",
       descripcion: "Sesiones semanales o quincenales.",
       precio: "$2,222 MXN"
+    },
+    {
+      icono: "fas fa-moon",
+      nombre: "Expansión femenina",
+      destacado: true,
+      descripcion: "21 días hábiles de trabajo de estructura interna con audios guiados y ejercicios.",
+      extra: "Reconoce patrones, conecta con tus deseos y elige con mayor claridad.",
+      precio: "$2,222 MXN"
     }
   ],
   nota: { icono: "far fa-calendar", texto: "Tu cita se confirma con el pago total anticipado." },
