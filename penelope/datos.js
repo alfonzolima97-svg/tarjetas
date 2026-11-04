@@ -46,7 +46,7 @@ window.TARJETA = {
   nota: { icono: "far fa-calendar", texto: "Tu cita se confirma con el pago total anticipado." },
 
   enlaces: [
-    { texto: "@penelope.magiaycaos", url: "https://instagram.com/penelope.magiaycaos", icono: "fab fa-instagram", color: "#e4405f" }
+    { texto: "@penelope.magiaycaos", url: "https://instagram.com/penelope.magiaycaos", icono: "fab fa-instagram", color: "#e4405f" },
     // Facebook (del diseño anterior), por si quieres volver a mostrarlo:
      { texto: "Comunidad en Facebook", url: "https://www.facebook.com/profile.php?id=100064049319044", icono: "fab fa-facebook", color: "#1877f2" }
   ],
