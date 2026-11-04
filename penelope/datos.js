@@ -15,7 +15,7 @@ window.TARJETA = {
   whatsapp: "5639399007",
   llamar: false,                       // true = muestra también el botón Llamar
   textoWhatsapp: "Agenda por WhatsApp",
-  subtextoWhatsapp: "56 3939 9007",
+  //subtextoWhatsapp: "56 3939 9007",
   mensajeWhatsapp: "Hola Penélope, me gustaría agendar una sesión.",
 
   tituloServicios: "Psicoterapia",
