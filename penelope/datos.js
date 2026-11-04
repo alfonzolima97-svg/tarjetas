@@ -1,7 +1,7 @@
 window.TARJETA = {
   nombre: "Penélope Covarrubias",
   cargo: "Licenciada en Psicología",
-  eslogan: "🔮 Magia & Espíritu con un toque de psicología 💜💚",
+  eslogan: "🔮 Magia & Caos donde el caos se transforma en magia y conciencia. 💜💚",
   foto: "foto.jpeg",
   agendaAbierta: true,
 
