@@ -41,7 +41,7 @@ window.TARJETA = {
     { texto: "@penelope.magiaycaos", url: "https://instagram.com/penelope.magiaycaos", icono: "fab fa-instagram", color: "#e4405f" },
     // Facebook (del diseño anterior), por si quieres volver a mostrarlo:
      { texto: "Comunidad en Facebook", url: "https://www.facebook.com/profile.php?id=100064049319044", icono: "fab fa-facebook", color: "#1877f2" },
-    { texto: "Agenda tu cita.", url: "https://www.facebook.com/profile.php?id=100064049319044", icono: "fab fa-calendly", color: "#1877f2" }
+    { texto: "Agenda tu cita.", url: "https://www.facebook.com/profile.php?id=100064049319044", icono: "far fa-calendar", color: "#1877f2" }
   ],
 
   pie: "Penélope  |  Magia & Caos",
