@@ -1,0 +1,344 @@
+/* ==========================================================
+   ESTILOS COMPARTIDOS DE TODAS LAS TARJETAS
+   Un cambio aquí se aplica a todos los clientes.
+   Los colores se cambian desde datos.js (campo "tema"),
+   no hace falta tocar este archivo para personalizar.
+   ========================================================== */
+
+:root {
+  --bg-gradient: linear-gradient(135deg, #f3e8ff 0%, #e0e7ff 100%);
+  --banner-gradient: linear-gradient(135deg, #9333ea 0%, #c084fc 100%);
+  --card-bg: rgba(255, 255, 255, 0.97);
+  --primary: #9333ea;
+  --text-main: #1e1b4b;
+  --text-muted: #5b21b6;
+  --surface: #faf5ff;
+  --surface-hover: #f3e8ff;
+  --tag-bg: #ede9fe;
+  --border-color: #ddd6fe;
+  --dark-btn: #1e1b4b;
+  --dark-btn-hover: #312e81;
+  --whatsapp: #25d366;
+  --whatsapp-hover: #22c55e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1.5rem 1rem;
+}
+
+/* ---------- Tarjeta ---------- */
+.card-container {
+  width: 100%;
+  max-width: 440px;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border-color);
+}
+
+.card-banner {
+  height: 110px;
+  background: var(--banner-gradient);
+}
+
+/* Todas las secciones comparten el mismo margen lateral */
+.card-container section,
+.card-container .action-grid {
+  padding: 0 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ---------- Perfil ---------- */
+.profile {
+  text-align: center;
+  margin-top: -45px;
+  position: relative;
+  z-index: 2;
+  padding: 0 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.status-badge {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: #22c55e;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.profile h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1.1rem;
+}
+
+.profile .title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: 0.2rem;
+}
+
+.profile .tagline {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+/* ---------- Botones (clase base compartida) ---------- */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background: var(--whatsapp);
+  color: #fff;
+}
+.btn-whatsapp:hover {
+  background: var(--whatsapp-hover);
+}
+
+.btn-call {
+  background: var(--surface);
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+.btn-call:hover {
+  border-color: var(--primary);
+}
+
+.btn-save {
+  width: 100%;
+  background: var(--dark-btn);
+  color: #fff;
+}
+.btn-save:hover {
+  background: var(--dark-btn-hover);
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+/* Si solo hay un botón de acción, ocupa todo el ancho */
+.action-grid.single {
+  grid-template-columns: 1fr;
+}
+
+/* ---------- Servicios ---------- */
+.services h2 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.services h2 i {
+  color: var(--primary);
+}
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.service-item:hover {
+  border-color: var(--primary);
+  background: var(--surface-hover);
+}
+
+.service-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.service-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.service-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.service-price {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--tag-bg);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  border: 1px solid var(--border-color);
+}
+
+/* ---------- Enlaces ---------- */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0.8rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+.link-card i {
+  font-size: 1.15rem;
+  position: absolute;
+  left: 1rem;
+}
+
+.link-card:hover {
+  border-color: var(--primary);
+  transform: translateX(4px);
+}
+
+/* ---------- Horario ---------- */
+.info-box {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.info-box h3 {
+  color: var(--text-main);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+/* ---------- Mapa ---------- */
+.map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 140px;
+  border: 0;
+  display: block;
+}
+
+/* ---------- Pie ---------- */
+.card-footer {
+  text-align: center;
+  padding: 0.25rem 0 1rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ---------- Campos opcionales (credenciales, marca, íconos de servicio, nota) ---------- */
+.profile .credentials { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.6; }
+.profile .brand h2 { font-size: 1.2rem; font-weight: 700; margin-top: 1rem; }
+.profile .brand p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.15rem; }
+.profile .about { font-size: 0.85rem; margin-top: 0.8rem; line-height: 1.5; }
+.service-icon { width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%; background: var(--tag-bg); color: var(--primary); display: flex; align-items: center; justify-content: center; }
+.service-tag, .service-extra { font-size: 0.75rem; color: var(--primary); font-weight: 600; }
+.service-note { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.75rem; }
+.service-note i { color: var(--primary); margin-right: 0.25rem; }
+.btn-text { display: flex; flex-direction: column; text-align: left; line-height: 1.25; }
+.btn-text small { font-size: 0.8rem; font-weight: 700; }
+
+/* ---------- Cinta en la esquina de un servicio (campo "cinta") ---------- */
+.service-item { position: relative; overflow: hidden; }
+.service-ribbon {
+  position: absolute; top: 26px; right: -36px;
+  width: 150px; padding: 0.2rem 0;
+  text-align: center; transform: rotate(45deg);
+  background: linear-gradient(135deg, var(--primary), color-mix(in oklab, var(--primary) 70%, #000));
+  color: #fff; font-size: 0.56rem; font-weight: 800;
+  letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(60, 30, 110, 0.3);
+}
+.service-item.con-cinta .service-info { padding-right: 2.6rem; }

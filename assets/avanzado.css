@@ -1,0 +1,193 @@
+/* ==========================================================
+   DISEÑO AVANZADO (se carga DESPUÉS de style.css)
+   Todos los tonos se calculan a partir de un solo color:
+   en datos.js -> tema: { principal: "#xxxxxx" }
+   Opcionales: texto y textoSuave (para el texto oscuro).
+   ========================================================== */
+
+* { font-family: 'Nunito', sans-serif; }
+.profile h1, .brand h2, .brand p, .services h2, .service-name, .card-footer {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+body {
+  background: linear-gradient(180deg,
+    color-mix(in oklab, var(--primary) 20%, #fff) 0%,
+    color-mix(in oklab, var(--primary) 7%, #fff) 100%);
+}
+
+.card-container {
+  /* Tonos derivados del color principal */
+  --tint-1: color-mix(in oklab, var(--primary) 6%, #fff);
+  --tint-2: color-mix(in oklab, var(--primary) 16%, #fff);
+  --tint-3: color-mix(in oklab, var(--primary) 28%, #fff);
+  --tint-4: color-mix(in oklab, var(--primary) 50%, #fff);
+  --deep:   color-mix(in oklab, var(--primary) 75%, #000);
+  --surface: var(--tint-1);
+  --surface-hover: var(--tint-2);
+  --tag-bg: var(--tint-2);
+  --border-color: var(--tint-3);
+
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, var(--tint-2) 0%, color-mix(in oklab, var(--primary) 4%, #fff) 260px, #fff 100%);
+  border: 1px solid var(--tint-3);
+  box-shadow: 0 25px 55px -25px color-mix(in oklab, var(--primary) 55%, transparent);
+}
+
+/* Orden: servicios -> horario/mapa -> WhatsApp -> enlaces -> guardar contacto */
+.horario, .mapa { order: 4; }
+.action-grid    { order: 5; }
+.links          { order: 6; }
+.save           { order: 7; }
+.card-footer    { order: 9; }
+
+/* ---------- Banner transparente con luna y destellos ---------- */
+.card-banner { background: transparent; height: 95px; position: relative; }
+.card-banner::before {
+  content: '';
+  position: absolute; left: 30px; top: 26px;
+  width: 52px; height: 52px; border-radius: 50%;
+  box-shadow: inset 13px -7px 0 0 var(--tint-4);
+  transform: rotate(-15deg);
+}
+.card-banner::after {
+  content: '✦   ✧';
+  position: absolute; right: 30px; top: 24px;
+  color: var(--tint-4); font-size: 1.1rem; letter-spacing: 0.4rem;
+}
+
+/* ---------- Perfil ---------- */
+.profile { margin-top: -45px; }
+.profile-pic {
+  width: 170px; height: 170px;
+  border: 5px solid #fff;
+  box-shadow: 0 0 0 9px var(--tint-2), 0 14px 30px color-mix(in oklab, var(--primary) 30%, transparent);
+}
+.profile-pic:hover { border-color: var(--primary); }
+
+/* Hojas decorativas a los lados de la foto */
+.avatar-wrapper::before, .avatar-wrapper::after {
+  content: '\f06c';
+  font-family: 'Font Awesome 6 Free'; font-weight: 900;
+  position: absolute; top: 70px;
+  font-size: 3rem; color: var(--tint-4);
+}
+.avatar-wrapper::before { left: -68px;  transform: rotate(-40deg); }
+.avatar-wrapper::after  { right: -68px; transform: scaleX(-1) rotate(-40deg); }
+
+.profile h1 {
+  font-size: 2.2rem; font-weight: 700; line-height: 1.05;
+  margin-top: 1.4rem; letter-spacing: -0.01em;
+}
+.profile .title   { font-size: 1rem; }
+.profile .tagline { font-size: 0.9rem; }
+.profile .credentials {
+  font-size: 0.78rem; letter-spacing: 0.17em; color: var(--text-muted);
+  margin-top: 0.7rem; line-height: 1.75;
+}
+
+/* Bloque de marca (espacio reducido respecto a las credenciales) */
+.profile .brand { margin-top: 0.8rem; }
+.profile .brand::before {
+  content: '✦'; display: block; color: #c9a96e; font-size: 0.9rem; margin-bottom: 0.25rem;
+}
+.profile .brand h2 { font-size: 2.3rem; font-weight: 600; line-height: 1; margin-top: 0; }
+.profile .brand p  { font-size: 1.1rem; color: var(--text-main); margin-top: 0.4rem; }
+.profile .about    { font-size: 0.92rem; color: var(--text-main); margin-top: 1.2rem; line-height: 1.55; }
+
+/* ---------- Servicios ---------- */
+.services h2 {
+  font-size: 1.05rem; font-weight: 700;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  margin-bottom: 1rem; gap: 0.75rem;
+}
+.services h2::before, .services h2::after {
+  content: ''; flex: 1; height: 1px; background: var(--tint-3);
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  align-items: start;
+  column-gap: 1rem;
+  row-gap: 0.7rem;
+  padding: 1rem;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  margin-bottom: 0.8rem;
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.service-item:hover {
+  background: var(--tint-2);
+  border-color: var(--tint-4);
+  box-shadow: 0 8px 20px -12px color-mix(in oklab, var(--primary) 55%, transparent);
+}
+
+.service-icon {
+  width: 56px; height: 56px;
+  background: var(--tint-2); color: var(--deep); font-size: 1.35rem;
+}
+.service-info { min-width: 0; }
+.service-name { font-size: 1.4rem; font-weight: 700; line-height: 1.1; }
+.service-tag  { font-size: 0.88rem; font-weight: 600; color: var(--primary); }
+.service-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; margin-top: 0.1rem; }
+.service-extra { font-size: 0.8rem; color: var(--primary); font-weight: 600; line-height: 1.4; margin-top: 0.3rem; }
+
+.service-price {
+  grid-column: 2; justify-self: start;
+  font-size: 0.92rem; font-weight: 800; color: var(--text-main);
+  background: var(--tag-bg); border: 1px solid var(--border-color);
+  border-radius: 999px; padding: 0.55rem 0.95rem;
+}
+
+/* destacado: true -> título en mayúsculas */
+.service-item.featured .service-name {
+  text-transform: uppercase; letter-spacing: 0.08em; font-size: 1.2rem;
+}
+
+.service-note {
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  font-size: 0.82rem; color: var(--text-main); margin-top: 1.1rem;
+}
+
+/* ---------- Botones tipo píldora ---------- */
+.btn-whatsapp {
+  background: var(--surface); color: var(--text-main);
+  border: 1px solid var(--border-color); border-radius: 999px;
+  padding: 0.75rem 1.2rem; justify-content: flex-start; gap: 1rem;
+}
+.btn-whatsapp:hover { background: var(--tint-2); }
+.btn-whatsapp i { font-size: 2rem; color: #25d366; }
+.btn-whatsapp .btn-text strong { font-size: 0.82rem; font-weight: 600; }
+.btn-whatsapp .btn-text small  { font-size: 1rem; font-weight: 800; }
+
+.action-grid, .action-grid.single { grid-template-columns: 1fr; gap: 0.65rem; }
+.btn-call { border-radius: 999px; padding: 0.85rem 1rem; }
+.btn-call i { font-size: 1.1rem; }
+
+.link-card {
+  background: var(--surface); border-radius: 999px; font-weight: 700;
+  padding: 0.95rem 1rem;
+}
+.link-card i { font-size: 1.6rem; left: 1.3rem; }
+
+.btn-save {
+  background: transparent; color: var(--deep);
+  border: 1px dashed var(--tint-4); border-radius: 999px; font-weight: 600;
+}
+.btn-save:hover { background: var(--tint-2); }
+
+.info-box { border-radius: 16px; }
+.map-container { border-radius: 16px; }
+
+/* ---------- Pie ---------- */
+.card-footer {
+  font-size: 1.15rem; font-style: italic; color: var(--text-muted); padding: 0.5rem 0 1.4rem;
+}
+
+@media (max-width: 400px) {
+  .avatar-wrapper::before, .avatar-wrapper::after { display: none; }
+}
