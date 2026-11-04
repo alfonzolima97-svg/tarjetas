@@ -1,6 +1,6 @@
 window.TARJETA = {
   nombre: "Penélope Covarrubias",
-  cargo: "Terapeuta Holística",
+  cargo: "Licenciada en Psicología",
   eslogan: "🔮 Magia & Espíritu con un toque de psicología 💜💚",
   foto: "foto.jpg",
   agendaAbierta: true,
