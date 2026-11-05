@@ -6,7 +6,7 @@ window.TARJETA = {
     nombre: "Magia & Caos",
     lema: "Donde el caos se transforma en magia y conciencia."
   },
-  descripcion: "Más de 10 años acompañando a mujeres a fortalecer su autonomía, seguridad y confianza.",
+  descripcion: "Acompaño a mujeres desde hace 10 años que han aprendido a resolverlo todo, pero que en sus relaciones afectivas siguen encontrándose con situaciones que no saben cómo manejar.",
   foto: "foto.jpg",
   agendaAbierta: false,
 
@@ -25,14 +25,14 @@ window.TARJETA = {
     {
       icono: "fas fa-brain",
       nombre: "Sesión individual",
-      descripcion: "Un espacio de escucha sin juicios para comprenderte y construir herramientas para tu día a día.",
+      descripcion: "Un espacio para comprender los patrones que se repiten en tus relaciones, reconocer qué está influyendo en tus decisiones y desarrollar nuevas formas de relacionarte contigo y con los demás.",
       precio: "$999 MXN"
     },
     {
       icono: "fas fa-leaf",
-      nombre: "Paquete de 5 sesiones",
+      nombre: "Paquete de 4 sesiones",
       cinta: "Precio especial",
-      descripcion: "Sesiones semanales o quincenales.",
+      descripcion: "Invierte en tu proceso con una tarifa preferencial.",
       precio: "$2,999 MXN"
     }
   ],
