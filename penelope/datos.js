@@ -26,14 +26,14 @@ window.TARJETA = {
       icono: "fas fa-brain",
       nombre: "Sesión individual",
       descripcion: "Un espacio de escucha sin juicios para comprenderte y construir herramientas para tu día a día.",
-      precio: "$555 MXN"
+      precio: "$999 MXN"
     },
     {
       icono: "fas fa-leaf",
       nombre: "Paquete de 5 sesiones",
       cinta: "Precio especial",
       descripcion: "Sesiones semanales o quincenales.",
-      precio: "$2,222 MXN"
+      precio: "$2,999 MXN"
     }
   ],
   nota: { icono: "far fa-calendar", texto: "Tu cita se confirma con el pago total anticipado." },
