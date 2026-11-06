@@ -11,6 +11,45 @@ window.TARJETA = {
   foto: "foto.jpg",              // cambia por foto.jpg cuando tengas la del cliente
   agendaAbierta: true,         // true = puntito verde de "agenda abierta"
 
+  decoracion: {
+  elementos: [
+    // Luna
+    {
+      tipo: "icono",
+      contenido: "fa-regular fa-moon",
+      posicion: "banner-izquierda"
+    },
+
+    // Destellos
+    {
+      tipo: "emoji",
+      contenido: "♣   ♥",
+      posicion: "banner-derecha"
+    },
+
+    // Hoja izquierda
+    {
+      tipo: "icono",
+      contenido: "fa-solid fa-leaf",
+      posicion: "foto-izquierda"
+    },
+
+    // Hoja derecha
+    {
+      tipo: "icono",
+      contenido: "fa-solid fa-leaf",
+      posicion: "foto-derecha"
+    }
+
+    // Flor decorativa
+   // {
+     // tipo: "imagen",
+      //contenido: "assets/decoraciones/flor.svg",
+      //posicion: "banner-derecha"
+    //}
+  ]
+},
+
   codigoPais: "52",             // 52 México, 502 Guatemala, 57 Colombia...
   telefono: "5579770527",
   whatsapp: "5579770527",
