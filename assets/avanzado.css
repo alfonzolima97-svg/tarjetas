@@ -55,8 +55,7 @@ body {
 }
 
 .card-banner::after {
-  content: '☀   
-  ✦';
+  content: '☀   ✦';
   position: absolute; right: 30px; top: 24px;
   color: var(--deco); font-size: 1.1rem; letter-spacing: 0.4rem;
 }
@@ -72,7 +71,7 @@ body {
 
 /* Hojas decorativas a los lados de la foto */
 .avatar-wrapper::before, .avatar-wrapper::after {
-  content: '\f004';
+  content: '\f06c';
   font-family: 'Font Awesome 6 Free'; font-weight: 900;
   position: absolute; top: 70px;
   font-size: 3rem; color: var(--deco);
