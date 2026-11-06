@@ -25,7 +25,7 @@ window.TARJETA = {
     {
       tipo: "icono",
       contenido: "fa-solid fa-moon",
-      posicion: "banner-izquierda".
+      posicion: "banner-izquierda",
       tamano: 150,
       moverX: 0,
       moverY: 0,
