@@ -23,6 +23,7 @@ body {
   --tint-3: color-mix(in oklab, var(--primary) 28%, #fff);
   --tint-4: color-mix(in oklab, var(--primary) 50%, #fff);
   --deep:   color-mix(in oklab, var(--primary) 75%, #000);
+  --deco:   color-mix(in oklab, var(--primary) 70%, #fff);
 	--surface: color-mix(in oklab, var(--primary) 3%, #fff);
   --surface-hover: var(--tint-2);
   --tag-bg: var(--tint-2);
@@ -47,16 +48,16 @@ body {
 /* ---------- Banner transparente con luna y destellos ---------- */
 .card-banner { background: transparent; height: 95px; position: relative; }
 .card-banner::before {
-  content: '';
+  content: '\f186';
+  font-family: 'Font Awesome 6 Free'; font-weight: 900;
   position: absolute; left: 30px; top: 26px;
-  width: 52px; height: 52px; border-radius: 50%;
-  box-shadow: inset 13px -7px 0 0 var(--tint-4);
-  transform: rotate(-15deg);
+  font-size: 2.6rem; color: var(--deco);
 }
+
 .card-banner::after {
-  content: '✦   ✧';
+  content: '❤️❤️';
   position: absolute; right: 30px; top: 24px;
-  color: var(--tint-4); font-size: 1.1rem; letter-spacing: 0.4rem;
+  color: var(--deco); font-size: 1.1rem; letter-spacing: 0.4rem;
 }
 
 /* ---------- Perfil ---------- */
@@ -73,7 +74,7 @@ body {
   content: '\f06c';
   font-family: 'Font Awesome 6 Free'; font-weight: 900;
   position: absolute; top: 70px;
-  font-size: 3rem; color: var(--tint-4);
+  font-size: 3rem; color: var(--deco);
 }
 .avatar-wrapper::before { left: -68px;  transform: rotate(-40deg); }
 .avatar-wrapper::after  { right: -68px; transform: scaleX(-1) rotate(-40deg); }
