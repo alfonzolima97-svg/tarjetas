@@ -15,8 +15,6 @@ window.TARJETA = {
   telefono: "5639399007",
   whatsapp: "5639399007",
   llamar: false,                        // true = muestra el botón Llamar, false = lo oculta
-  textoWhatsapp: "Agenda por WhatsApp",
-  subtextoWhatsapp: "+52 56 3939 9007",
   mensajeWhatsapp: "Hola Penélope, me gustaría agendar una sesión.",
 
   tituloServicios: "Psicoterapia",
@@ -39,10 +37,16 @@ window.TARJETA = {
   nota: { icono: "far fa-calendar", texto: "Tu cita se confirma con el pago total anticipado." },
 
   // OJO: entre un bloque { } y el siguiente va una COMA (la última no lleva)
-  enlaces: [
-    { texto: "@penelope.magiaycaos", url: "https://instagram.com/penelope.magiaycaos", icono: "fab fa-instagram", color: "#e4405f" },
-    { texto: "Comunidad en Facebook", url: "https://www.facebook.com/profile.php?id=100064049319044", icono: "fab fa-facebook", color: "#1877f2" },
-    { texto: "Agenda tu cita", url: "https://www.facebook.com/profile.php?id=100064049319044", icono: "fab fa-calendar", color: "#8e6bc9" }
+  //enlaces: [
+   // { texto: "@penelope.magiaycaos", url: "https://instagram.com/penelope.magiaycaos", icono: "fab fa-instagram", color: "#e4405f" },
+  //  { texto: "Comunidad en Facebook", url: "https://www.facebook.com/profile.php?id=100064049319044", icono: "fab fa-facebook", color: "#1877f2" },
+   // { texto: "Agenda tu cita", url: "https://www.facebook.com/profile.php?id=100064049319044", icono: "fab fa-calendar", color: "#8e6bc9" }
+  //],
+  agenda: { texto: "Agenda tu cita", url: "https://calendly.com/TU-USUARIO/TU-EVENTO" },
+
+  redes: [
+    { nombre: "Instagram", url: "https://instagram.com/penelope.magiaycaos", icono: "fab fa-instagram", color: "#e4405f" },
+    { nombre: "Facebook",  url: "https://www.facebook.com/profile.php?id=100064049319044", icono: "fab fa-facebook", color: "#1877f2" }
   ],
 
   pie: "Penélope  |  Magia & Caos",
