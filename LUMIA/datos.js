@@ -2,7 +2,7 @@
 window.TARJETA = {
   tituloPagina: "Alfonso Lima - Programador | LUMIA Studio",
   nombre: "Alfonso Lima",
-  credenciales: ["Ingeniero en Programación"],
+  credenciales: ["Programador"],
   marca: {
     nombre: "LUMIA Studio",
     lema: "Innovación que conecta, diseño que destaca."
@@ -69,12 +69,11 @@ window.TARJETA = {
       contenido: "fa-solid fa-css",
       posicion: "banner-derecha",
       tamano: 50,
-      moverX: 10,
-      moverY: 10,
+      moverX: -25,
+      moverY: 0,
       rotacion: 0,
       opacidad: 1,
       color: "#388DFF",
-      colorear: false,
       capa: 3
     }
   ]
