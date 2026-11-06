@@ -50,7 +50,7 @@ body {
 .card-banner::before {
   content: '\f186';
   font-family: 'Font Awesome 6 Free'; font-weight: 900;
-  position: absolute; left: 30px; top: 26px;
+  position: absolute; left: 30px; top: 50px;
   font-size: 2.6rem; color: var(--deco);
 }
 
@@ -74,7 +74,7 @@ body {
   content: '\f06c';
   font-family: 'Font Awesome 6 Free'; font-weight: 900;
   position: absolute; top: 70px;
-  font-size: 3rem; color: var(--deco);
+  font-size: 2rem; color: var(--deco);
 }
 .avatar-wrapper::before { left: -68px;  transform: rotate(-40deg); }
 .avatar-wrapper::after  { right: -68px; transform: scaleX(-1) rotate(-40deg); }
