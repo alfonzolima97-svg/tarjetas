@@ -12,8 +12,8 @@ window.TARJETA = {
 
   // Los números van SIN el 52; la tarjeta lo agrega sola con codigoPais
   codigoPais: "52",
-  telefono: "5639399007",
-  whatsapp: "5639399007",
+  telefono: "5639299007",
+  whatsapp: "5639299007",
   llamar: false,                        // true = muestra el botón Llamar, false = lo oculta
   textoWhatsapp: "¿Tienes dudas? Escríbeme por WhatsApp",
   iconoWhatsapp:  "far fa-comment",
