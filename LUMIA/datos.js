@@ -23,7 +23,7 @@ window.TARJETA = {
     // Destellos
     {
       tipo: "emoji",
-      contenido: "♣   ♥",
+      contenido: "♣           ♥",
       posicion: "banner-derecha"
     },
 
