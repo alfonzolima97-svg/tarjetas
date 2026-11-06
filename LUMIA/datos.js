@@ -68,14 +68,14 @@ window.TARJETA = {
       tipo: "icono",
       contenido: "fa-brands fa-css",
       posicion: "banner-derecha",
-      tamano: 200,
+      tamano: 50,
       moverX: 50,
       moverY: -50,
       rotacion: -25,
       opacidad: 1,
       color: "#388DFF",
       colorear: true,
-      capa: 2
+      capa: 3
     }
   ]
 },
@@ -107,6 +107,7 @@ window.TARJETA = {
     {
       icono: "fa-solid fa-code",
       nombre: "Pagina Web",
+      cinta: "Precio especial",
       descripcion: "Creacion de su pagina web para aumentar el alcance de su negocio",
       //extra: "Texto destacado opcional bajo la descripción.",
       precio: "$1,899 MXN"
