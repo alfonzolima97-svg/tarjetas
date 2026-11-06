@@ -10,10 +10,34 @@ window.TARJETA = {
   foto: "foto.jpg",
   agendaAbierta: false,
   
-  decoracion: {
-  luna: "🌙",
-  hojas: "🍃",
-  destellos: "✦ ✧"
+decoracion: {
+  elementos: [
+    {
+      tipo: "emoji",
+      contenido: "🌙",
+      posicion: "banner-izquierda"
+    },
+    {
+      tipo: "emoji",
+      contenido: "✨",
+      posicion: "banner-derecha"
+    },
+    {
+      tipo: "icono",
+      contenido: "fa-solid fa-leaf",
+      posicion: "foto-izquierda"
+    },
+    {
+      tipo: "icono",
+      contenido: "fa-solid fa-leaf",
+      posicion: "foto-derecha"
+    },
+    {
+      tipo: "emoji",
+      contenido: "🌸",
+      posicion: "esquina-inferior"
+    }
+  ]
 },
 
   // Los números van SIN el 52; la tarjeta lo agrega sola con codigoPais
