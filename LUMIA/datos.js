@@ -39,9 +39,9 @@ window.TARJETA = {
       tipo: "imagen",
       contenido: "../assets/decoraciones/Destellos.png",
       posicion: "banner-derecha",
-      tamano: 1000,
-      moverX: 0,
-      moverY: 0
+      tamano: 200,
+      moverX: 10,
+      moverY: 10
     }
   ]
 },
