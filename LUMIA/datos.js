@@ -40,8 +40,8 @@ window.TARJETA = {
       contenido: "../assets/decoraciones/Destellos.png",
       posicion: "banner-derecha",
       tamano: 200,
-      moverX: 10,
-      moverY: 10
+      moverX: 50,
+      moverY: 50
     }
   ]
 },
