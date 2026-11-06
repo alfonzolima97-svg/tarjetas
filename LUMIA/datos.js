@@ -11,6 +11,14 @@ window.TARJETA = {
   foto: "foto.jpg",              // cambia por foto.jpg cuando tengas la del cliente
   agendaAbierta: true,         // true = puntito verde de "agenda abierta"
 
+   // Personaliza la forma de la foto: circular, cuadrada, redondeada, ovalada, hexagonal, arco o diamante.
+  fotoEstilo: {
+    forma: "diamante",
+    tamano: 170,  // píxeles (80 a 300)
+    borde: 5,     // grosor del borde (0 a 20)
+    sombra: true
+  },
+
   decoracion: {
   elementos: [
     // Luna
