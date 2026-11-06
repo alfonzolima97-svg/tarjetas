@@ -40,8 +40,8 @@ body {
 .horario, .mapa { order: 4; }
 .action-grid    { order: 5; }
 .links          { order: 6; }
-.save           { order: 7; }
-.redes          { order: 8; }
+.redes          { order: 7; }
+.save           { order: 8; }
 .card-footer    { order: 9; }
 
 /* ---------- Banner transparente con luna y destellos ---------- */
@@ -154,33 +154,57 @@ body {
   font-size: 0.82rem; color: var(--text-main); margin-top: 1.1rem;
 }
 
-/* ---------- Botones tipo píldora (WhatsApp, Agenda, Llamar) ---------- */
-.action-grid, .action-grid.single { grid-template-columns: 1fr; gap: 0.65rem; }
-.action-grid .btn {
-  position: relative;
-  justify-content: center;
-  padding: 0.95rem 1rem;
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--text-main);
-  border: 1px solid var(--border-color);
-  font-size: 0.9rem; font-weight: 700;
-}
-.action-grid .btn:hover { background: var(--surface); border-color: var(--primary); transform: translateX(4px); }
-.action-grid .btn i { position: absolute; left: 1.3rem; font-size: 1.6rem; color: var(--primary); }
-.action-grid .btn-whatsapp i { color: #25d366; }
-.action-grid .btn-text { align-items: center; text-align: center; }
+/* ---------- Botones: Agenda (principal) y WhatsApp (secundario) ---------- */
+.action-grid, .action-grid.single { grid-template-columns: 1fr; gap: 0.8rem; }
+.action-grid .btn { border-radius: 22px; padding: 1rem 1.2rem; font-weight: 700; }
+.action-grid .btn:hover { transform: translateY(-2px); }
 
-/* ---------- Redes sociales: solo íconos ---------- */
-.redes { display: flex; justify-content: center; gap: 1rem; margin-bottom: 0.5rem; }
-.social-icon {
-  width: 52px; height: 52px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  background: var(--surface); border: 1px solid var(--border-color);
-  color: var(--primary); font-size: 1.5rem; text-decoration: none;
-  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+/* Agenda: botón principal, color sólido, va primero */
+.action-grid .btn-agenda {
+  order: -1;
+  flex-direction: column;
+  gap: 0.3rem;
+  background: var(--deep);
+  color: #fff;
+  border-color: var(--deep);
+  padding: 1.25rem 1.2rem;
+  box-shadow: 0 12px 24px -14px var(--deep);
 }
-.social-icon:hover { transform: translateY(-3px); background: var(--tint-2); border-color: var(--primary); }
+.action-grid .btn-agenda:hover { filter: brightness(1.15); }
+.btn-agenda .agenda-titulo { display: flex; align-items: center; gap: 0.7rem; font-size: 1.15rem; }
+.btn-agenda .agenda-titulo i { font-size: 1.4rem; }
+.btn-agenda small { font-size: 0.85rem; font-weight: 500; opacity: 0.85; }
+
+/* WhatsApp: botón suave, texto a la izquierda */
+.action-grid .btn-whatsapp {
+  justify-content: flex-start;
+  gap: 0.9rem;
+  background: var(--tint-2);
+  color: var(--deep);
+  border: 1px solid var(--tint-3);
+  font-size: 1.02rem; font-weight: 600;
+  text-align: left;
+}
+.action-grid .btn-whatsapp i { font-size: 1.4rem; color: var(--primary); flex-shrink: 0; }
+.action-grid .btn-text { align-items: flex-start; text-align: left; }
+.action-grid .btn-text strong { font-weight: 600; }
+
+/* ---------- Redes sociales: título + solo íconos ---------- */
+.redes { text-align: center; margin-bottom: 0.8rem; }
+.redes h3 {
+  font-size: 0.8rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.9rem;
+}
+.redes-iconos { display: flex; justify-content: center; gap: 1.6rem; }
+.social-icon {
+  font-size: 1.9rem; color: var(--primary); text-decoration: none;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.social-icon:hover { transform: translateY(-3px); opacity: 0.8; }
+
+
 
 .link-card {
   background: var(--surface); border-radius: 999px; font-weight: 700;
@@ -189,10 +213,14 @@ body {
 .link-card i { font-size: 1.6rem; left: 1.3rem; }
 
 .btn-save {
-  background: transparent; color: var(--deep);
-  border: 1px dashed var(--tint-4); border-radius: 999px; font-weight: 600;
+  background: none; border: none; box-shadow: none;
+  color: var(--text-muted);
+  font-size: 0.85rem; font-weight: 500;
+  padding: 0.3rem;
 }
-.btn-save:hover { background: var(--tint-2); }
+.btn-save i { display: none; }
+.btn-save:hover { background: none; transform: none; text-decoration: underline; }
+
 
 .info-box { border-radius: 16px; }
 .map-container { border-radius: 16px; }
