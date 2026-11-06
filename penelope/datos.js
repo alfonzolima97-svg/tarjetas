@@ -14,15 +14,15 @@ decoracion: {
   elementos: [
     // Luna
     {
-      tipo: "emoji",
-      contenido: "🌙",
+      tipo: "icono",
+      contenido: "fa-regular fa-moon",
       posicion: "banner-izquierda"
     },
 
     // Destellos
     {
       tipo: "emoji",
-      contenido: "✨",
+      contenido: "♣   ♥",
       posicion: "banner-derecha"
     },
 
