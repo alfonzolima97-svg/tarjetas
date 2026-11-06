@@ -39,50 +39,51 @@
       '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
     }[c]));
 
-   // ---------- Sistema de decoraciones ----------
-const renderDecoracion = (elemento) => {
-  const posiciones = [
-    "banner-izquierda",
-    "banner-derecha",
-    "foto-izquierda",
-    "foto-derecha"
-  ];
+// ---------- Sistema de decoraciones ----------
+const POSICIONES_DECORACION = [
+  "banner-izquierda",
+  "banner-derecha",
+  "foto-izquierda",
+  "foto-derecha"
+];
 
-  if (!posiciones.includes(elemento.posicion)) return "";
+const renderDecoracion = (elemento = {}) => {
+  if (!POSICIONES_DECORACION.includes(elemento.posicion)) return "";
 
   const clase = `decoracion-item ${elemento.posicion}`;
+  const contenido = String(elemento.contenido || "");
 
   if (elemento.tipo === "emoji") {
-    return `<span class="${clase}">${esc(elemento.contenido)}</span>`;
+    return `<span class="${clase}">${esc(contenido)}</span>`;
   }
 
   if (elemento.tipo === "icono") {
-    return `<i class="${clase} ${esc(elemento.contenido)}" aria-hidden="true"></i>`;
+    return `<i class="${clase} ${esc(contenido)}" aria-hidden="true"></i>`;
   }
 
   if (elemento.tipo === "imagen") {
-    const src = String(elemento.contenido || "");
+    const esRutaLocal = /^(?!\/)(?!.*(?:\.\.|\\))[\w./-]+\.(svg|png|jpe?g|webp)$/i.test(contenido);
+    const esUrlSegura = /^https:\/\/[^\s"'<>]+$/i.test(contenido);
 
-    // Solo permitir rutas relativas o imágenes HTTPS
-    if (!/^(?!\/)(?!.*(?:\.\.|\\))[\w./-]+\.svg$|^https:\/\/[^\s"'<>]+$/i.test(src)) {
-      return "";
-    }
+    if (!esRutaLocal && !esUrlSegura) return "";
 
-    return `<img class="${clase}" src="${esc(src)}" alt="" aria-hidden="true">`;
+    return `<img class="${clase}" src="${esc(contenido)}" alt="" aria-hidden="true">`;
   }
 
   return "";
 };
 
-const decoraciones = d.decoracion?.elementos || [];
+const decoraciones = Array.isArray(d.decoracion?.elementos)
+  ? d.decoracion.elementos
+  : [];
 
 const decoracionesBanner = decoraciones
-  .filter(e => e.posicion.startsWith("banner-"))
+  .filter(e => e && e.posicion?.startsWith("banner-"))
   .map(renderDecoracion)
   .join("");
 
 const decoracionesFoto = decoraciones
-  .filter(e => e.posicion.startsWith("foto-"))
+  .filter(e => e && e.posicion?.startsWith("foto-"))
   .map(renderDecoracion)
   .join("");
 
@@ -121,7 +122,7 @@ const decoracionesFoto = decoraciones
   // ---------- Piezas de la tarjeta ----------
   const piezas = [];
 
- const deco = d.decoracion || {};
+
 
 piezas.push(`
   <div class="card-banner">
