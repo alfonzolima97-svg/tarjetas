@@ -45,49 +45,93 @@ body {
 .save           { order: 8; }
 .card-footer    { order: 9; }
 
+/* ===================================
+   SISTEMA DE DECORACIONES
+=================================== */
 
-/* ---------- Elementos decorativos personalizables ---------- */
-
-.card-banner .deco-luna {
-  position: absolute;
-  left: 30px;
-  top: 45px;
-  font-size: 2.6rem;
-  color: var(--deco);
-}
-
-.card-banner .deco-destellos {
-  position: absolute;
-  right: 30px;
-  top: 24px;
-  font-size: 1.3rem;
-  letter-spacing: 0.4rem;
-  color: var(--deco);
-}
-
-.avatar-wrapper .deco-hoja {
-  position: absolute;
-  top: 70px;
-  font-size: 2rem;
-  color: var(--deco);
-  z-index: 1;
-}
-
-.avatar-wrapper .deco-hoja.izquierda {
-  left: -68px;
-  transform: rotate(-40deg);
-}
-
-.avatar-wrapper .deco-hoja.derecha {
-  right: -68px;
-  transform: scaleX(-1) rotate(-40deg);
-}
-
-/* ---------- Decoraciones superiores ---------- */
 .card-banner {
   background: transparent;
   height: 95px;
   position: relative;
+  overflow: visible;
+}
+
+/* Elementos generales */
+
+.decoracion-item {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  z-index: 3;
+  line-height: 1;
+}
+
+/* ---------- Banner ---------- */
+
+.card-banner .banner-izquierda {
+  left: 30px;
+  top: 35px;
+}
+
+.card-banner .banner-derecha {
+  right: 30px;
+  top: 25px;
+}
+
+/* ---------- Fotografía ---------- */
+
+.avatar-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
+.avatar-wrapper .foto-izquierda {
+  left: -68px;
+  top: 70px;
+}
+
+.avatar-wrapper .foto-derecha {
+  right: -68px;
+  top: 70px;
+}
+
+/* ---------- Emojis e iconos ---------- */
+
+.decoracion-item:not(img) {
+  font-size: 2rem;
+  color: var(--deco);
+}
+
+/* ---------- Imágenes PNG, SVG, JPG ---------- */
+
+.decoracion-item[src] {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+/* ---------- Móvil ---------- */
+
+@media (max-width: 340px) {
+
+  .avatar-wrapper .foto-izquierda {
+    left: -46px;
+    top: 80px;
+  }
+
+  .avatar-wrapper .foto-derecha {
+    right: -46px;
+    top: 80px;
+  }
+
+  .decoracion-item:not(img) {
+    font-size: 1.7rem;
+  }
+
+  .decoracion-item[src] {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 
