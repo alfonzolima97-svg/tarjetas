@@ -7,7 +7,7 @@ window.TARJETA = {
     nombre: "LUMIA Studio",
     lema: "Innovación que conecta, diseño que destaca."
   },
-  descripcion: "Creamos soluciones digitales que impulsan tu presencia en internet. Diseñamos tarjetas de presentación digitales, páginas web y herramientas personalizadas para ayudarte a conectar con todos tus clientes.",
+  //descripcion: "Creamos soluciones digitales que impulsan tu presencia en internet. Diseñamos tarjetas de presentación digitales, páginas web y herramientas personalizadas para ayudarte a conectar con todos tus clientes.",
   foto: "foto.jpg",              // cambia por foto.jpg cuando tengas la del cliente
   agendaAbierta: true,         // true = puntito verde de "agenda abierta"
 
@@ -39,7 +39,7 @@ window.TARJETA = {
       icono: "fa-solid fa-code",
       nombre: "Pagina Web",
       descripcion: "Creacion de su pagina web para aumentar el alcance de su negocio",
-      extra: "Texto destacado opcional bajo la descripción.",
+      //extra: "Texto destacado opcional bajo la descripción.",
       precio: "$1,899 MXN"
     }
   ],
