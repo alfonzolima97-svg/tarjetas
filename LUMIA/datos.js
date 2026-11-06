@@ -69,12 +69,12 @@ window.TARJETA = {
       contenido: "fa-brands fa-css",
       posicion: "banner-derecha",
       tamano: 50,
-      moverX: 0,
-      moverY: 0,
-      rotacion: -25,
+      moverX: 10,
+      moverY: 10,
+      rotacion: 0,
       opacidad: 1,
       color: "#388DFF",
-      colorear: true,
+      colorear: false,
       capa: 3
     }
   ]
