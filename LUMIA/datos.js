@@ -26,7 +26,7 @@ window.TARJETA = {
       tipo: "icono",
       contenido: "fa-solid fa-moon",
       posicion: "banner-izquierda",
-      tamano: 150,
+      tamano: 50,
       moverX: -50,
       moverY: -50,
       rotacion: 0,
@@ -75,7 +75,7 @@ window.TARJETA = {
       opacidad: 1,
       color: "#388DFF",
       colorear: true,
-      capa: 3
+      capa: 2
     }
   ]
 },
