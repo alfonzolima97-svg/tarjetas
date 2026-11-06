@@ -30,9 +30,9 @@ window.TARJETA = {
     },
     {
       icono: "fa-solid fa-circle-user",
-      nombre: ""Targeta Digital Ejecutiva",
+      nombre: "Tarjeta Digital Ejecutiva",
       //cinta: "Precio especial",          // cinta en la esquina ( Solo si hay oferta; si no, bórrala)
-      descripcion: " "Se genera una tarjeta digital con diseños y estructuras más avanzadas, integracion de mapa.( Incluye 1 cambio mensual, dominio y hosting gratis)",
+      descripcion: "Se genera una tarjeta digital con diseños y estructuras más avanzadas, integracion de mapa.( Incluye 1 cambio mensual, dominio y hosting gratis)",
       precio: "$499 MXN"
     },
     {
@@ -61,10 +61,10 @@ window.TARJETA = {
   //},
   //direccion: "Calle y número, Colonia, Ciudad, País",
 
-tituloRedes: "Conoce más de Magia & Caos",
+tituloRedes: "Conoce más de LUMIA Studio",
   redes: [
-    { nombre: "Instagram", url: "https://instagram.com/penelope.magiaycaos", icono: "fab fa-instagram", color: "#e4405f" },
-    { nombre: "Facebook",  url: "https://www.facebook.com/profile.php?id=100064049319044", icono: "fab fa-facebook", color: "#1877f2" }
+    { nombre: "Instagram", url: "https://instagram.com/", icono: "fab fa-instagram", color: "#e4405f" },
+    { nombre: "Facebook",  url: "https://www.facebook.com/", icono: "fab fa-facebook", color: "#1877f2" }
   ],
 
   pie: "Alfonso Lima  |  LUMIA Studio",
