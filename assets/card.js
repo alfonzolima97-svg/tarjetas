@@ -74,12 +74,21 @@
   // ---------- Piezas de la tarjeta ----------
   const piezas = [];
 
-  piezas.push('<div class="card-banner"></div>');
+ const deco = d.decoracion || {};
+
+piezas.push(`
+  <div class="card-banner">
+    ${deco.luna ? `<span class="deco-luna">${esc(deco.luna)}</span>` : ''}
+    ${deco.destellos ? `<span class="deco-destellos">${esc(deco.destellos)}</span>` : ''}
+  </div>
+`);
 
   // Perfil
   piezas.push(`
     <div class="profile">
       <div class="avatar-wrapper">
+      ${deco.hojas ? `<span class="deco-hoja izquierda">${esc(deco.hojas)}</span>
+        <span class="deco-hoja derecha">${esc(deco.hojas)}</span>` : ''}
         <img src="${esc(d.foto || 'foto.jpg')}" alt="${esc(d.nombre)}" class="profile-pic">
         ${d.agendaAbierta !== false ? '<span class="status-badge" title="Agenda abierta"></span>' : ''}
       </div>
