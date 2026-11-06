@@ -46,7 +46,7 @@ window.TARJETA = {
   //],
   agenda: { texto: "Agenda tu cita", 
     subtexto: "Da el primer paso en tu proceso",
-    url: "https://calendly.com/TU-USUARIO/TU-EVENTO" },
+    url: "https://calendly.com/penelopecovarrubias/30min" },
 
 tituloRedes: "Conoce más de Magia & Caos",
   redes: [
