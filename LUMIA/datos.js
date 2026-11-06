@@ -66,7 +66,7 @@ window.TARJETA = {
     // deracion superior derecha
     {
       tipo: "icono",
-      contenido: "fa-solid fa-css",
+      contenido: "fa-solid fa-laptop-code",
       posicion: "banner-derecha",
       tamano: 50,
       moverX: -25,
