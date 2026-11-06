@@ -39,14 +39,14 @@ window.TARJETA = {
       tipo: "icono",
       contenido: "fa-solid fa-leaf",
       posicion: "foto-derecha"
-    }
+    },
 
     // Flor decorativa
-   // {
-     // tipo: "imagen",
-      //contenido: "assets/decoraciones/flor.svg",
-      //posicion: "banner-derecha"
-    //}
+    {
+      tipo: "imagen",
+      contenido: "assets/decoraciones/Destellos.png",
+      posicion: "banner-derecha"
+    }
   ]
 },
 
