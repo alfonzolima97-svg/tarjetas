@@ -39,6 +39,53 @@
       '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
     }[c]));
 
+   // ---------- Sistema de decoraciones ----------
+const renderDecoracion = (elemento) => {
+  const posiciones = [
+    "banner-izquierda",
+    "banner-derecha",
+    "foto-izquierda",
+    "foto-derecha"
+  ];
+
+  if (!posiciones.includes(elemento.posicion)) return "";
+
+  const clase = `decoracion-item ${elemento.posicion}`;
+
+  if (elemento.tipo === "emoji") {
+    return `<span class="${clase}">${esc(elemento.contenido)}</span>`;
+  }
+
+  if (elemento.tipo === "icono") {
+    return `<i class="${clase} ${esc(elemento.contenido)}" aria-hidden="true"></i>`;
+  }
+
+  if (elemento.tipo === "imagen") {
+    const src = String(elemento.contenido || "");
+
+    // Solo permitir rutas relativas o imágenes HTTPS
+    if (!/^(?!\/)(?!.*(?:\.\.|\\))[\w./-]+\.svg$|^https:\/\/[^\s"'<>]+$/i.test(src)) {
+      return "";
+    }
+
+    return `<img class="${clase}" src="${esc(src)}" alt="" aria-hidden="true">`;
+  }
+
+  return "";
+};
+
+const decoraciones = d.decoracion?.elementos || [];
+
+const decoracionesBanner = decoraciones
+  .filter(e => e.posicion.startsWith("banner-"))
+  .map(renderDecoracion)
+  .join("");
+
+const decoracionesFoto = decoraciones
+  .filter(e => e.posicion.startsWith("foto-"))
+  .map(renderDecoracion)
+  .join("");
+
   // Solo dígitos: 5215639299007
   const soloDigitos = (s = '') => String(s).replace(/\D/g, '');
 
@@ -78,8 +125,7 @@
 
 piezas.push(`
   <div class="card-banner">
-    ${deco.luna ? `<span class="deco-luna">${esc(deco.luna)}</span>` : ''}
-    ${deco.destellos ? `<span class="deco-destellos">${esc(deco.destellos)}</span>` : ''}
+    ${decoracionesBanner}
   </div>
 `);
 
@@ -87,8 +133,7 @@ piezas.push(`
   piezas.push(`
     <div class="profile">
       <div class="avatar-wrapper">
-      ${deco.hojas ? `<span class="deco-hoja izquierda">${esc(deco.hojas)}</span>
-        <span class="deco-hoja derecha">${esc(deco.hojas)}</span>` : ''}
+      ${decoracionesFoto}
         <img src="${esc(d.foto || 'foto.jpg')}" alt="${esc(d.nombre)}" class="profile-pic">
         ${d.agendaAbierta !== false ? '<span class="status-badge" title="Agenda abierta"></span>' : ''}
       </div>
