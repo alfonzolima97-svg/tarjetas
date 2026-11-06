@@ -64,12 +64,12 @@ const renderDecoracion = (elemento = {}) => {
   const clase = `decoracion-item ${elemento.posicion}`;
   const contenido = String(elemento.contenido || "");
 
-  const tamano = numeroDecoracion(elemento.tamano, 32, 8, 400);
-  const moverX = numeroDecoracion(elemento.moverX, 0);
-  const moverY = numeroDecoracion(elemento.moverY, 0);
-  const rotacion = numeroDecoracion(elemento.rotacion, 0, -360, 360);
-  const opacidad = Math.min(1, Math.max(0, Number(elemento.opacidad ?? 1)));
-  const capa = numeroDecoracion(elemento.capa, 3, 0, 20);
+  const tamano = numeroSeguro(elemento.tamano, 32, 8, 400);
+  const moverX = numeroSeguro(elemento.moverX, 0, -300, 300);
+  const moverY = numeroSeguro(elemento.moverY, 0, -300, 300);
+  const rotacion = numeroSeguro(elemento.rotacion, 0, -360, 360);
+  const opacidad = numeroSeguro(elemento.opacidad, 1, 0, 1);
+  const capa = numeroSeguro(elemento.capa, 3, 0, 20);
 
   const colorValido = /^#[0-9a-f]{3}([0-9a-f]{3})?$/i.test(elemento.color || "");
   const color = colorValido ? elemento.color : "currentColor";
