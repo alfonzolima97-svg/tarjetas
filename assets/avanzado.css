@@ -41,6 +41,7 @@ body {
 .action-grid    { order: 5; }
 .links          { order: 6; }
 .save           { order: 7; }
+.redes          { order: 8; }
 .card-footer    { order: 9; }
 
 /* ---------- Banner transparente con luna y destellos ---------- */
