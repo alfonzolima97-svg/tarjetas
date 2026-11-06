@@ -32,14 +32,28 @@ window.TARJETA = {
     {
       tipo: "icono",
       contenido: "fa-solid fa-leaf",
-      posicion: "foto-izquierda"
+      posicion: "foto-izquierda",
+      //tamano: 200,
+      //moverX: 0,
+      //moverY: 0,
+      //rotacion: 0,
+      //opacidad: 0,
+      //color: "",
+      //capa: 0
     },
 
     // Hoja derecha
     {
       tipo: "icono",
       contenido: "fa-solid fa-leaf",
-      posicion: "foto-derecha"
+      posicion: "foto-derecha",
+      //tamano: 200,
+      //moverX: 50,
+      //moverY: -50,
+      //rotacion: 0,
+      //opacidad: 0,
+      //color: "",
+      //capa: 0
     },
 
     // Flor decorativa
@@ -49,7 +63,11 @@ window.TARJETA = {
       posicion: "banner-derecha",
       tamano: 200,
       moverX: 50,
-      moverY: -50
+      moverY: -50,
+      rotacion: -25,
+      opacidad: 1,
+      color: "#b89555",
+      capa: 3
     }
   ]
 },
