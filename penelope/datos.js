@@ -9,6 +9,15 @@ window.TARJETA = {
   descripcion: "Acompaño a mujeres desde hace 10 años que han aprendido a resolverlo todo, pero que en sus relaciones afectivas siguen encontrándose con situaciones que no saben cómo manejar.",
   foto: "foto.jpg",
   agendaAbierta: false,
+
+   // Personaliza la forma de la foto: circular, cuadrada, redondeada,
+  // ovalada, hexagonal, arco o diamante.
+  fotoEstilo: {
+    forma: "arco",
+    tamano: 170,  // píxeles (80 a 300)
+    borde: 5,     // grosor del borde (0 a 20)
+    sombra: true
+  },
   
 decoracion: {
   elementos: [
