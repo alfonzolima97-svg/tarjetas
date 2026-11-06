@@ -1,0 +1,346 @@
+/* ==========================================================
+   DISEÑO AVANZADO (se carga DESPUÉS de style.css)
+   Todos los tonos se calculan a partir de un solo color:
+   en datos.js -> tema: { principal: "#xxxxxx" }
+   Opcionales: texto y textoSuave (para el texto oscuro).
+   ========================================================== */
+
+* { font-family: 'Nunito', sans-serif; }
+.profile h1, .brand h2, .brand p, .services h2, .service-name, .card-footer {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+body {
+  background: linear-gradient(180deg,
+    color-mix(in oklab, var(--primary) 20%, #fff) 0%,
+    color-mix(in oklab, var(--primary) 7%, #fff) 100%);
+}
+
+.card-container {
+  /* Tonos derivados del color principal */
+  --tint-1: color-mix(in oklab, var(--primary) 6%, #fff);
+  --tint-2: color-mix(in oklab, var(--primary) 16%, #fff);
+  --tint-3: color-mix(in oklab, var(--primary) 28%, #fff);
+  --tint-4: color-mix(in oklab, var(--primary) 50%, #fff);
+  --deep:   color-mix(in oklab, var(--primary) 75%, #000);
+  --deco:   color-mix(in oklab, var(--primary) 70%, #fff);
+	--surface: color-mix(in oklab, var(--primary) 3%, #fff);
+  --surface-hover: var(--tint-2);
+  --tag-bg: var(--tint-2);
+  --border-color: var(--tint-3);
+
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--primary) 50%, #fff) 0%, color-mix(in oklab, var(--primary) 25%, #fff) 300px, color-mix(in oklab, var(--primary) 0%, #fff) 100%);
+  border: 1px solid var(--tint-3);
+  box-shadow: 0 25px 55px -25px color-mix(in oklab, var(--primary) 55%, transparent);
+}
+
+/* Orden: servicios -> horario/mapa -> WhatsApp -> enlaces -> guardar contacto */
+.horario, .mapa { order: 4; }
+.action-grid    { order: 5; }
+.links          { order: 6; }
+.redes          { order: 7; }
+.save           { order: 8; }
+.card-footer    { order: 9; }
+
+/* ===================================
+   SISTEMA DE DECORACIONES
+=================================== */
+
+.card-banner {
+  background: transparent;
+  height: 95px;
+  position: relative;
+  overflow: visible;
+}
+
+/* Elementos generales */
+
+.decoracion-item {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  z-index: var(--deco-layer, 3);
+  opacity: var(--deco-opacity, 1);
+  line-height: 1;
+  white-space: pre; /* Conserva los espacios entre emojis o símbolos */
+  font-size: var(--deco-size, 2rem);
+  transform: translate(var(--deco-x, 0px), var(--deco-y, 0px)) rotate(var(--deco-rotate, 0deg));
+}
+
+/* ---------- Banner ---------- */
+
+.card-banner .banner-izquierda {
+  left: 30px;
+  top: 35px;
+}
+
+.card-banner .banner-derecha {
+  right: 30px;
+  top: 25px;
+}
+
+/* ---------- Fotografía ---------- */
+
+.avatar-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
+.avatar-wrapper .foto-izquierda {
+  left: -68px;
+  top: 70px;
+}
+
+.avatar-wrapper .foto-derecha {
+  right: -68px;
+  top: 70px;
+}
+
+/* ---------- Emojis e iconos ---------- */
+
+.decoracion-item:not(img) {
+  color: var(--deco-color, var(--deco));
+}
+
+/* ---------- Imágenes PNG, SVG, JPG ---------- */
+
+.decoracion-item[src] {
+  width: var(--deco-size, 45px);
+  height: var(--deco-size, 45px);
+  object-fit: contain;
+}
+
+/* ---------- Móvil ---------- */
+
+@media (max-width: 340px) {
+
+  .avatar-wrapper .foto-izquierda {
+    left: -46px;
+    top: 80px;
+  }
+
+  .avatar-wrapper .foto-derecha {
+    right: -46px;
+    top: 80px;
+  }
+
+  .decoracion-item:not(img) {
+    font-size: var(--deco-size, 1.7rem);
+  }
+
+  .decoracion-item[src] {
+    width: var(--deco-size, 35px);
+    height: var(--deco-size, 35px);
+  }
+}
+
+
+/* ---------- Perfil ---------- */
+.profile { margin-top: -45px; }
+.profile-pic {
+  width: var(--foto-size, 170px);
+  height: var(--foto-size, 170px);
+  border: var(--foto-border, 5px) solid #fff;
+  box-shadow: var(--foto-shadow, 0 0 0 9px var(--tint-2), 0 14px 30px color-mix(in oklab, var(--primary) 30%, transparent));
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+.profile-pic.foto-forma-circular { border-radius: 50%; }
+.profile-pic.foto-forma-cuadrada { border-radius: 0; }
+.profile-pic.foto-forma-redondeada { border-radius: 22%; }
+.profile-pic.foto-forma-ovalada { border-radius: 50% / 35%; }
+.profile-pic.foto-forma-hexagonal {
+  border-radius: 0;
+  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0 50%);
+}
+.profile-pic.foto-forma-arco {
+  border-radius: 50% 50% 8px 8px;
+}
+.profile-pic.foto-forma-diamante {
+  border-radius: 0;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+.profile-pic:hover { border-color: var(--primary); }
+
+
+.avatar-wrapper .deco-hoja.izquierda {
+  left: -68px;
+  transform: rotate(-40deg);
+}
+
+.avatar-wrapper .deco-hoja.derecha {
+  right: -68px;
+  transform: scaleX(-1) rotate(-40deg);
+}
+
+.profile h1 {
+  font-size: 2.2rem; font-weight: 700; line-height: 1.05;
+  margin-top: 1.4rem; letter-spacing: -0.01em;
+}
+.profile .title   { font-size: 1rem; }
+.profile .tagline { font-size: 0.9rem; }
+.profile .credentials {
+  font-size: 0.78rem; letter-spacing: 0.17em; color: var(--text-muted);
+  margin-top: 0.7rem; line-height: 1.75;
+}
+
+/* Bloque de marca (espacio reducido respecto a las credenciales) */
+.profile .brand { margin-top: 0.8rem; }
+.profile .brand::before {
+  content: '✦'; display: block; color: #c9a96e; font-size: 0.9rem; margin-bottom: 0.25rem;
+}
+.profile .brand h2 { font-size: 2.3rem; font-weight: 600; line-height: 1; margin-top: 0; }
+.profile .brand p  { font-size: 1.1rem; color: var(--text-main); margin-top: 0.4rem; }
+.profile .about    { font-size: 0.92rem; color: var(--text-main); margin-top: 1.2rem; line-height: 1.55; }
+
+/* ---------- Servicios ---------- */
+.services h2 {
+  font-size: 1.05rem; font-weight: 700;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  margin-bottom: 1rem; gap: 0.75rem;
+}
+.services h2::before, .services h2::after {
+  content: ''; flex: 1; height: 1px; background: var(--tint-3);
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  align-items: start;
+  column-gap: 1rem;
+  row-gap: 0.7rem;
+  padding: 1rem;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  margin-bottom: 0.8rem;
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.service-item:hover {
+  background: var(--tint-3);
+  border-color: var(--tint-4);
+  box-shadow: 0 8px 20px -12px color-mix(in oklab, var(--primary) 55%, transparent);
+}
+
+.service-icon {
+  width: 56px; height: 56px;
+  background: var(--tint-2); color: var(--deep); font-size: 1.35rem;
+}
+.service-info { min-width: 0; }
+.service-name { font-size: 1.4rem; font-weight: 700; line-height: 1.1; }
+.service-tag  { font-size: 0.88rem; font-weight: 600; color: var(--primary); }
+.service-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; margin-top: 0.1rem; }
+.service-extra { font-size: 0.8rem; color: var(--primary); font-weight: 600; line-height: 1.4; margin-top: 0.3rem; }
+
+.service-price {
+  grid-column: 2; justify-self: start;
+  font-size: 0.92rem; font-weight: 800; color: var(--text-main);
+  background: var(--tag-bg); border: 1px solid var(--border-color);
+  border-radius: 999px; padding: 0.55rem 0.95rem;
+}
+
+/* destacado: true -> título en mayúsculas */
+.service-item.featured .service-name {
+  text-transform: uppercase; letter-spacing: 0.08em; font-size: 1.2rem;
+}
+
+.service-note {
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  font-size: 0.82rem; color: var(--text-main); margin-top: 1.1rem;
+}
+
+/* ---------- Botones: Agenda (principal) y WhatsApp (secundario) ---------- */
+.action-grid, .action-grid.single { grid-template-columns: 1fr; gap: 0.8rem; }
+.action-grid .btn { border-radius: 22px; padding: 1rem 1.2rem; font-weight: 700; }
+.action-grid .btn:hover { transform: translateY(-2px); }
+
+/* Agenda: botón principal, color sólido, va primero */
+.action-grid .btn-agenda {
+  order: -1;
+  flex-direction: column;
+  gap: 0.3rem;
+  background: var(--deep);
+  color: #fff;
+  border-color: var(--deep);
+  padding: 1.25rem 1.2rem;
+  box-shadow: 0 12px 24px -14px var(--deep);
+}
+.action-grid .btn-agenda:hover { filter: brightness(1.15); }
+.btn-agenda .agenda-titulo { display: flex; align-items: center; gap: 0.7rem; font-size: 1.15rem; }
+.btn-agenda .agenda-titulo i { font-size: 1.4rem; }
+.btn-agenda small { font-size: 0.85rem; font-weight: 500; opacity: 0.85; }
+
+/* WhatsApp: botón suave, texto a la izquierda */
+.action-grid .btn-whatsapp {
+  justify-content: flex-start;
+  gap: 0.9rem;
+  background: var(--surface);
+  color: var(--deep);
+  border: 1px solid var(--tint-3);
+  font-size: 1.02rem; font-weight: 600;
+  text-align: left;
+}
+.action-grid .btn-whatsapp i { font-size: 1.4rem; color: var(--primary); flex-shrink: 0; }
+.action-grid .btn-text { align-items: flex-start; text-align: left; }
+.action-grid .btn-text strong { font-weight: 600; }
+
+/* ---------- Redes sociales: título + solo íconos ---------- */
+.redes { text-align: center; margin-bottom: 0.8rem; }
+.redes h3 {
+  font-size: 0.8rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.9rem;
+}
+.redes-iconos { display: flex; justify-content: center; gap: 1.6rem; }
+.social-icon {
+  font-size: 1.9rem; color: var(--primary); text-decoration: none;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.social-icon:hover { transform: translateY(-3px); opacity: 0.8; }
+
+
+
+.link-card {
+  background: var(--surface); border-radius: 999px; font-weight: 700;
+  padding: 0.95rem 1rem;
+}
+.link-card i { font-size: 1.6rem; left: 1.3rem; }
+
+.btn-save {
+  background: none; border: none; box-shadow: none;
+  color: var(--text-muted);
+  font-size: 0.85rem; font-weight: 500;
+  padding: 0.3rem;
+}
+.btn-save i { display: none; }
+.btn-save:hover { background: none; transform: none; text-decoration: underline; }
+
+
+.info-box { border-radius: 16px; }
+.map-container { border-radius: 16px; }
+
+/* ---------- Pie ---------- */
+.card-footer {
+  font-size: 1.15rem; font-style: italic; color: var(--text-muted); padding: 0.5rem 0 1.4rem;
+}
+
+/* En pantallas muy angostas (menos de 340 px) las hojas se achican y se acercan a la foto */
+@media (max-width: 340px) {
+  .avatar-wrapper .deco-hoja {
+    font-size: 2.2rem;
+    top: 80px;
+  }
+
+  .avatar-wrapper .deco-hoja.izquierda {
+    left: -46px;
+  }
+
+  .avatar-wrapper .deco-hoja.derecha {
+    right: -46px;
+  }
+}
+
