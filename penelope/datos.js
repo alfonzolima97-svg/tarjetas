@@ -12,30 +12,39 @@ window.TARJETA = {
   
 decoracion: {
   elementos: [
+    // Luna
     {
       tipo: "emoji",
       contenido: "🌙",
       posicion: "banner-izquierda"
     },
+
+    // Destellos
     {
       tipo: "emoji",
       contenido: "✨",
       posicion: "banner-derecha"
     },
+
+    // Hoja izquierda
     {
       tipo: "icono",
       contenido: "fa-solid fa-leaf",
       posicion: "foto-izquierda"
     },
+
+    // Hoja derecha
     {
       tipo: "icono",
       contenido: "fa-solid fa-leaf",
       posicion: "foto-derecha"
     },
+
+    // Flor decorativa
     {
-      tipo: "emoji",
-      contenido: "🌸",
-      posicion: "esquina-inferior"
+      tipo: "imagen",
+      contenido: "assets/decoraciones/flor.svg",
+      posicion: "banner-derecha"
     }
   ]
 },
