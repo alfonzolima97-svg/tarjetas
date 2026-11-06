@@ -63,11 +63,13 @@ body {
   display: block;
   pointer-events: none;
   z-index: var(--deco-layer, 3);
-  opacity: var(--deco-opacity, 1);
   line-height: 1;
-  white-space: pre; /* Conserva los espacios entre emojis o símbolos */
+  white-space: pre;
   font-size: var(--deco-size, 2rem);
-  transform: translate(var(--deco-x, 0px), var(--deco-y, 0px)) rotate(var(--deco-rotate, 0deg));
+  opacity: var(--deco-opacity, 1);
+  color: var(--deco-color, var(--deco));
+  transform: translate(var(--deco-x, 0px), var(--deco-y, 0px))
+             rotate(var(--deco-rotate, 0deg));
 }
 
 /* ---------- Banner ---------- */
@@ -111,6 +113,25 @@ body {
   width: var(--deco-size, 45px);
   height: var(--deco-size, 45px);
   object-fit: contain;
+}
+
+/* Imágenes PNG y SVG recoloreadas */
+.decoracion-coloreada {
+  width: var(--deco-size, 45px);
+  height: var(--deco-size, 45px);
+  background-color: var(--deco-color);
+
+  -webkit-mask-image: var(--deco-mask);
+  mask-image: var(--deco-mask);
+
+  -webkit-mask-size: contain;
+  mask-size: contain;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-position: center;
+  mask-position: center;
 }
 
 /* ---------- Móvil ---------- */
