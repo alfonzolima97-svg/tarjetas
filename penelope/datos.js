@@ -9,6 +9,12 @@ window.TARJETA = {
   descripcion: "Acompaño a mujeres desde hace 10 años que han aprendido a resolverlo todo, pero que en sus relaciones afectivas siguen encontrándose con situaciones que no saben cómo manejar.",
   foto: "foto.jpg",
   agendaAbierta: false,
+  
+  decoracion: {
+  luna: "🌙",
+  hojas: "🍃",
+  destellos: "✦ ✧"
+},
 
   // Los números van SIN el 52; la tarjeta lo agrega sola con codigoPais
   codigoPais: "52",
