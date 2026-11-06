@@ -231,6 +231,10 @@ body {
   font-size: 1.15rem; font-style: italic; color: var(--text-muted); padding: 0.5rem 0 1.4rem;
 }
 
-@media (max-width: 400px) {
-  .avatar-wrapper::before, .avatar-wrapper::after { display: none; }
+/* En pantallas muy angostas (menos de 340 px) las hojas se achican y se acercan a la foto */
+@media (max-width: 340px) {
+  .avatar-wrapper::before, .avatar-wrapper::after { font-size: 2.2rem; top: 80px; }
+  .avatar-wrapper::before { left: -46px; }
+  .avatar-wrapper::after  { right: -46px; }
 }
+
