@@ -66,7 +66,7 @@ window.TARJETA = {
     // deracion superior derecha
     {
       tipo: "icono",
-      contenido: "fa-brands fa-css",
+      contenido: "fa-solid fa-css",
       posicion: "banner-derecha",
       tamano: 50,
       moverX: 10,
