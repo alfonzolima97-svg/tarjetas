@@ -39,7 +39,7 @@ window.TARJETA = {
       tipo: "imagen",
       contenido: "../assets/decoraciones/Destellos.png",
       posicion: "banner-derecha",
-      tamano: 48,
+      tamano: 100,
       moverX: 0,
       moverY: 0
     }
