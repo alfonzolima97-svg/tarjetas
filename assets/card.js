@@ -57,27 +57,32 @@ const colorSeguro = (valor) =>
     ? valor
     : "";
 
+
 const renderDecoracion = (elemento = {}) => {
   if (!elemento || !POSICIONES_DECORACION.includes(elemento.posicion)) return "";
 
   const clase = `decoracion-item ${elemento.posicion}`;
   const contenido = String(elemento.contenido || "");
-  const tamano = numeroSeguro(elemento.tamano, 32, 8, 180);
-  const moverX = numeroSeguro(elemento.moverX, 0, -300, 300);
-  const moverY = numeroSeguro(elemento.moverY, 0, -300, 300);
-  const rotacion = numeroSeguro(elemento.rotacion, 0, -360, 360);
-  const opacidad = numeroSeguro(elemento.opacidad, 1, 0, 1);
-  const capa = numeroSeguro(elemento.capa, 3, 0, 20);
-  const color = colorSeguro(elemento.color);
-  const estilo = [
-    `--deco-size:${tamano}px`,
-    `--deco-x:${moverX}px`,
-    `--deco-y:${moverY}px`,
-    `--deco-rotate:${rotacion}deg`,
-    `--deco-opacity:${opacidad}`,
-    `--deco-layer:${capa}`,
-    color ? `--deco-color:${color}` : ""
-  ].filter(Boolean).join(";");
+
+  const tamano = numeroDecoracion(elemento.tamano, 32, 8, 400);
+  const moverX = numeroDecoracion(elemento.moverX, 0);
+  const moverY = numeroDecoracion(elemento.moverY, 0);
+  const rotacion = numeroDecoracion(elemento.rotacion, 0, -360, 360);
+  const opacidad = Math.min(1, Math.max(0, Number(elemento.opacidad ?? 1)));
+  const capa = numeroDecoracion(elemento.capa, 3, 0, 20);
+
+  const colorValido = /^#[0-9a-f]{3}([0-9a-f]{3})?$/i.test(elemento.color || "");
+  const color = colorValido ? elemento.color : "currentColor";
+
+  const estilo = `
+    --deco-size:${tamano}px;
+    --deco-x:${moverX}px;
+    --deco-y:${moverY}px;
+    --deco-rotate:${rotacion}deg;
+    --deco-opacity:${Number.isFinite(opacidad) ? opacidad : 1};
+    --deco-layer:${capa};
+    --deco-color:${color};
+  `;
 
   if (elemento.tipo === "emoji") {
     return `<span class="${clase}" style="${estilo}">${esc(contenido)}</span>`;
@@ -88,15 +93,30 @@ const renderDecoracion = (elemento = {}) => {
   }
 
   if (elemento.tipo === "imagen") {
-    // Se aceptan archivos de la carpeta compartida o de una subcarpeta del cliente.
-    const esRutaLocal = /^(?:\.\.\/assets\/decoraciones\/|assets\/decoraciones\/|decoraciones\/)[\w.-]+\.(?:svg|png|jpe?g|webp)$/i.test(contenido);
+    const esRutaLocal =
+      /^(?:\.\.\/assets\/decoraciones\/|assets\/decoraciones\/)?[\w./-]+\.(svg|png|jpe?g|webp)$/i.test(contenido)
+      && !contenido.includes("\\")
+      && !contenido.startsWith("/")
+      && !contenido.split("/").includes("..")
+      || /^\.\.\/assets\/decoraciones\/[\w.-]+\.(svg|png|jpe?g|webp)$/i.test(contenido);
+
     const esUrlSegura = /^https:\/\/[^\s"'<>]+$/i.test(contenido);
+
     if (!esRutaLocal && !esUrlSegura) return "";
+
+    if (elemento.colorear && colorValido) {
+      return `<span
+        class="${clase} decoracion-coloreada"
+        style="${estilo};--deco-mask:url('${esc(contenido)}')"
+        aria-hidden="true"></span>`;
+    }
+
     return `<img class="${clase}" style="${estilo}" src="${esc(contenido)}" alt="" aria-hidden="true">`;
   }
 
   return "";
 };
+
 
 const decoraciones = Array.isArray(d.decoracion?.elementos)
   ? d.decoracion.elementos
