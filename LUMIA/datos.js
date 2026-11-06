@@ -13,7 +13,7 @@ window.TARJETA = {
 
    // Personaliza la forma de la foto: circular, cuadrada, redondeada, ovalada, hexagonal, arco o diamante.
   fotoEstilo: {
-    forma: "diamante",
+    forma: "hexagonal",
     tamano: 170,  // píxeles (80 a 300)
     borde: 5,     // grosor del borde (0 a 20)
     sombra: true
@@ -67,7 +67,7 @@ window.TARJETA = {
       rotacion: -25,
       opacidad: 1,
       color: "#388DFF",
-      colorear: true.
+      colorear: true,
       capa: 3
     }
   ]
