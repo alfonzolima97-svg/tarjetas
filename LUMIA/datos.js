@@ -24,10 +24,10 @@ window.TARJETA = {
     // Luna
     {
       tipo: "icono",
-      contenido: "fa-solid fa-moon",
+      contenido: "fa-solid fa-laptop-code",
       posicion: "banner-izquierda",
       tamano: 50,
-      moverX: 50,
+      moverX: 25,
       moverY: 0,
       rotacion: 0,
       opacidad: 1,
