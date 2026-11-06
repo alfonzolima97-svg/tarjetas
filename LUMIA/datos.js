@@ -41,7 +41,7 @@ window.TARJETA = {
       posicion: "banner-derecha",
       tamano: 200,
       moverX: 50,
-      moverY: 50
+      moverY: -50
     }
   ]
 },
