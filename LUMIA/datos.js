@@ -38,7 +38,7 @@ window.TARJETA = {
     // Hoja izquierda
     {
       tipo: "icono",
-      contenido: "fa-solid fa-leaf",
+      contenido: "fa-solid fa-file-code",
       posicion: "foto-izquierda",
       //tamano: 200,
       //moverX: 0,
@@ -52,7 +52,7 @@ window.TARJETA = {
     // Hoja derecha
     {
       tipo: "icono",
-      contenido: "fa-solid fa-leaf",
+      contenido: "fa-solid fa-code",
       posicion: "foto-derecha",
       //tamano: 200,
       //moverX: 50,
@@ -63,10 +63,10 @@ window.TARJETA = {
       //capa: 0
     },
 
-    // Flor decorativa
+    // deracion superior derecha
     {
-      tipo: "imagen",
-      contenido: "../assets/decoraciones/Destellos.png",
+      tipo: "icono",
+      contenido: "fa-brands fa-css",
       posicion: "banner-derecha",
       tamano: 200,
       moverX: 50,
