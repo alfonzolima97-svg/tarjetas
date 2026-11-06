@@ -27,7 +27,7 @@ window.TARJETA = {
       contenido: "fa-solid fa-moon",
       posicion: "banner-izquierda",
       tamano: 50,
-      moverX: -50,
+      moverX: 50,
       moverY: -50,
       rotacion: 0,
       opacidad: 1,
