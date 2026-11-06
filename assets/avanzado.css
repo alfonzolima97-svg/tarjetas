@@ -45,20 +45,44 @@ body {
 .save           { order: 8; }
 .card-footer    { order: 9; }
 
-/* ---------- Banner transparente con luna y destellos ---------- */
-.card-banner { background: transparent; height: 95px; position: relative; }
-.card-banner::before {
-  content: '\f186';
-  font-family: 'Font Awesome 6 Free'; font-weight: 900;
-  position: absolute; left: 30px; top: 50px;
-  font-size: 2.6rem; color: var(--deco);
+
+/* ---------- Elementos decorativos personalizables ---------- */
+
+.card-banner .deco-luna {
+  position: absolute;
+  left: 30px;
+  top: 45px;
+  font-size: 2.6rem;
+  color: var(--deco);
 }
 
-.card-banner::after {
-  content: '☀   ✦';
-  position: absolute; right: 30px; top: 24px;
-  color: var(--deco); font-size: 1.1rem; letter-spacing: 0.4rem;
+.card-banner .deco-destellos {
+  position: absolute;
+  right: 30px;
+  top: 24px;
+  font-size: 1.3rem;
+  letter-spacing: 0.4rem;
+  color: var(--deco);
 }
+
+.avatar-wrapper .deco-hoja {
+  position: absolute;
+  top: 70px;
+  font-size: 2rem;
+  color: var(--deco);
+  z-index: 1;
+}
+
+.avatar-wrapper .deco-hoja.izquierda {
+  left: -68px;
+  transform: rotate(-40deg);
+}
+
+.avatar-wrapper .deco-hoja.derecha {
+  right: -68px;
+  transform: scaleX(-1) rotate(-40deg);
+}
+
 
 /* ---------- Perfil ---------- */
 .profile { margin-top: -45px; }
@@ -69,13 +93,7 @@ body {
 }
 .profile-pic:hover { border-color: var(--primary); }
 
-/* Hojas decorativas a los lados de la foto */
-.avatar-wrapper::before, .avatar-wrapper::after {
-  content: '\f06c';
-  font-family: 'Font Awesome 6 Free'; font-weight: 900;
-  position: absolute; top: 70px;
-  font-size: 2rem; color: var(--deco);
-}
+
 .avatar-wrapper::before { left: -68px;  transform: rotate(-40deg); }
 .avatar-wrapper::after  { right: -68px; transform: scaleX(-1) rotate(-40deg); }
 
@@ -233,8 +251,17 @@ body {
 
 /* En pantallas muy angostas (menos de 340 px) las hojas se achican y se acercan a la foto */
 @media (max-width: 340px) {
-  .avatar-wrapper::before, .avatar-wrapper::after { font-size: 2.2rem; top: 80px; }
-  .avatar-wrapper::before { left: -46px; }
-  .avatar-wrapper::after  { right: -46px; }
+  .avatar-wrapper .deco-hoja {
+    font-size: 2.2rem;
+    top: 80px;
+  }
+
+  .avatar-wrapper .deco-hoja.izquierda {
+    left: -46px;
+  }
+
+  .avatar-wrapper .deco-hoja.derecha {
+    right: -46px;
+  }
 }
 
