@@ -66,7 +66,8 @@ window.TARJETA = {
       moverY: -50,
       rotacion: -25,
       opacidad: 1,
-      color: "#b89555",
+      color: "#388DFF",
+      colorear: true.
       capa: 3
     }
   ]
