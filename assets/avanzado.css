@@ -31,7 +31,7 @@ body {
   max-width: 460px;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(180deg, color-mix(in oklab, var(--primary) 40%, #fff) 0%, color-mix(in oklab, var(--primary) 20%, #fff) 300px, color-mix(in oklab, var(--primary) 0%, #fff) 100%);
+  background: linear-gradient(180deg, color-mix(in oklab, var(--primary) 50%, #fff) 0%, color-mix(in oklab, var(--primary) 25%, #fff) 300px, color-mix(in oklab, var(--primary) 0%, #fff) 100%);
   border: 1px solid var(--tint-3);
   box-shadow: 0 25px 55px -25px color-mix(in oklab, var(--primary) 55%, transparent);
 }
