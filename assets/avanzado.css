@@ -101,8 +101,15 @@ body {
 .profile-pic:hover { border-color: var(--primary); }
 
 
-.avatar-wrapper::before { left: -68px;  transform: rotate(-40deg); }
-.avatar-wrapper::after  { right: -68px; transform: scaleX(-1) rotate(-40deg); }
+.avatar-wrapper .deco-hoja.izquierda {
+  left: -68px;
+  transform: rotate(-40deg);
+}
+
+.avatar-wrapper .deco-hoja.derecha {
+  right: -68px;
+  transform: scaleX(-1) rotate(-40deg);
+}
 
 .profile h1 {
   font-size: 2.2rem; font-weight: 700; line-height: 1.05;
