@@ -70,7 +70,7 @@ window.TARJETA = {
       posicion: "banner-derecha",
       tamano: 40,
       moverX: 20,
-      moverY: 10,
+      moverY: 5,
       rotacion: 0,
       opacidad: 1,
       color: "#388DFF",
