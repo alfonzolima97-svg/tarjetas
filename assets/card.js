@@ -102,6 +102,9 @@
       : 'WhatsApp';
     botones.push(`<a href="https://wa.me/${wa}${msg}" target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> ${waTexto}</a>`);
   }
+    if (d.agenda && /^https?:\/\//i.test(d.agenda.url || '')) {
+    botones.push(`<a href="${esc(d.agenda.url)}" target="_blank" rel="noopener" class="btn btn-agenda"><i class="${esc(d.agenda.icono || 'far fa-calendar-check')}"></i> ${esc(d.agenda.texto || 'Agenda tu cita')}</a>`);
+  }
   if (tel && d.llamar !== false) {
     botones.push(`<a href="tel:+${tel}" class="btn btn-call"><i class="fas fa-phone-alt"></i> Llamar</a>`);
   }
@@ -171,6 +174,15 @@
         </div>
       </section>`);
   }
+  // Redes sociales: solo íconos circulares
+  if (d.redes && d.redes.length) {
+    const iconos = d.redes
+      .filter((r) => /^https?:\/\//i.test(r.url || ''))
+      .map((r) => `<a href="${esc(r.url)}" target="_blank" rel="noopener" class="social-icon" aria-label="${esc(r.nombre || 'Red social')}" title="${esc(r.nombre || '')}"><i class="${esc(r.icono)}"${r.color ? ` style="color:${esc(r.color)}"` : ''}></i></a>`)
+      .join('');
+    piezas.push(`<section class="redes">${iconos}</section>`);
+  }
+
 
   // Pie
   if (d.pie) {
