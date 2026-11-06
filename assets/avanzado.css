@@ -153,20 +153,33 @@ body {
   font-size: 0.82rem; color: var(--text-main); margin-top: 1.1rem;
 }
 
-/* ---------- Botones tipo píldora ---------- */
-.btn-whatsapp {
-  background: var(--surface); color: var(--text-main);
-  border: 1px solid var(--border-color); border-radius: 999px;
-  padding: 0.75rem 1.2rem; justify-content: flex-start; gap: 1rem;
-}
-.btn-whatsapp:hover { background: var(--tint-2); }
-.btn-whatsapp i { font-size: 2rem; color: #25d366; }
-.btn-whatsapp .btn-text strong { font-size: 0.82rem; font-weight: 600; }
-.btn-whatsapp .btn-text small  { font-size: 1rem; font-weight: 800; }
-
+/* ---------- Botones tipo píldora (WhatsApp, Agenda, Llamar) ---------- */
 .action-grid, .action-grid.single { grid-template-columns: 1fr; gap: 0.65rem; }
-.btn-call { border-radius: 999px; padding: 0.85rem 1rem; }
-.btn-call i { font-size: 1.1rem; }
+.action-grid .btn {
+  position: relative;
+  justify-content: center;
+  padding: 0.95rem 1rem;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  font-size: 0.9rem; font-weight: 700;
+}
+.action-grid .btn:hover { background: var(--surface); border-color: var(--primary); transform: translateX(4px); }
+.action-grid .btn i { position: absolute; left: 1.3rem; font-size: 1.6rem; color: var(--primary); }
+.action-grid .btn-whatsapp i { color: #25d366; }
+.action-grid .btn-text { align-items: center; text-align: center; }
+
+/* ---------- Redes sociales: solo íconos ---------- */
+.redes { display: flex; justify-content: center; gap: 1rem; margin-bottom: 0.5rem; }
+.social-icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--surface); border: 1px solid var(--border-color);
+  color: var(--primary); font-size: 1.5rem; text-decoration: none;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+.social-icon:hover { transform: translateY(-3px); background: var(--tint-2); border-color: var(--primary); }
 
 .link-card {
   background: var(--surface); border-radius: 999px; font-weight: 700;
