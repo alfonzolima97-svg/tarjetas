@@ -13,7 +13,7 @@ window.TARJETA = {
 
    // Personaliza la forma de la foto: circular, cuadrada, redondeada, ovalada, hexagonal, arco o diamante.
   fotoEstilo: {
-    forma: "cuadrada",
+    forma: "redondeada",
     tamano: 170,  // píxeles (80 a 300)
     borde: 5,     // grosor del borde (0 a 20)
     sombra: true
@@ -27,12 +27,12 @@ window.TARJETA = {
       contenido: "fa-solid fa-moon",
       posicion: "banner-izquierda",
       tamano: 150,
-      moverX: 0,
-      moverY: 0,
+      moverX: -50,
+      moverY: -50,
       rotacion: 0,
-      opacidad: 0,
+      opacidad: 1,
       color: "#388DFF",
-      capa: 0
+      capa: 3
     },
 
     // Hoja izquierda
