@@ -148,7 +148,7 @@ tituloRedes: "Conoce más de LUMIA Studio",
 
   // Un solo color y todo el diseño se ajusta. Texto y textoSuave son opcionales.
   tema: {
-    principal: "#4682B4",
+    principal: "#003366",
     texto: "#5E9FF7",
     textoSuave: "#478DFF"
   }
