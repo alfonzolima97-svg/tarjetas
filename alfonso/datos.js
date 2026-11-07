@@ -4,11 +4,11 @@ window.TARJETA = {
   nombre: "LUMIA Studio",
   credenciales: ["Empresa de Programación"],
   marca: {
-    nombre: "LUMIA Studio",
-    descripcion: "Innovación que conecta, diseño que destaca."
+    nombre: "Innovación que conecta, diseño que destaca.o",
+    //descripcion: ""
   },
   //descripcion: "Creamos soluciones digitales que impulsan tu presencia en internet. Diseñamos tarjetas de presentación digitales, páginas web y herramientas personalizadas para ayudarte a conectar con todos tus clientes.",
-  foto: "foto.jpg",              // cambia por foto.jpg cuando tengas la del cliente
+  foto: "foto.JPG",              // cambia por foto.jpg cuando tengas la del cliente
   agendaAbierta: true,         // true = puntito verde de "agenda abierta"
 
    // Personaliza la forma de la foto: circular, cuadrada, redondeada, ovalada, hexagonal, arco o diamante.
