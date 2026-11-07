@@ -105,7 +105,7 @@ tituloRedes: "Conoce más de Magia & Caos",
     { nombre: "Facebook",  url: "https://www.facebook.com/profile.php?id=100064049319044", icono: "fab fa-facebook", color: "#1877f2" }
   ],
 
-  pie: "Penélope  |  Magia & Caos",
+  pie: "Hecha por LUMIA Studio",
 
   // Un solo color y todo el diseño se ajusta. Texto y textoSuave son opcionales.
   tema: {
