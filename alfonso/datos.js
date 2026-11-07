@@ -9,7 +9,7 @@ window.TARJETA = {
     //descripcion: ""
   },
   //descripcion: "Creamos soluciones digitales que impulsan tu presencia en internet. Diseñamos tarjetas de presentación digitales, páginas web y herramientas personalizadas para ayudarte a conectar con todos tus clientes.",
-  foto: "logo.png",              // cambia por foto.jpg cuando tengas la del cliente
+  foto: "foto.jpg",              // cambia por foto.jpg cuando tengas la del cliente
   agendaAbierta: true,         // true = puntito verde de "agenda abierta"
 
    // Personaliza la forma de la foto: circular, cuadrada, redondeada, ovalada, hexagonal, arco o diamante.
