@@ -92,30 +92,30 @@ window.TARJETA = {
   servicios: [
     {
       icono: "fa-regular fa-circle-user",
-      nombre: "Tarjeta Digital Basica.",
-      descripcion: "Se genera una tarjeta digital con diseños y estructura basica.( Sin cambios mensuales, incuye dominio y hosting gratis.)",
+      nombre: "Tarjeta Digital Básica",
+      descripcion: "Creación de tu tarjeta digital con diseños y estructura basica (sin cambios mensuales, incluye dominio y hosting).",
       precio: "$299 MXN"
     },
     {
       icono: "fa-solid fa-circle-user",
       nombre: "Tarjeta Digital Ejecutiva",
       //cinta: "Precio especial",          // cinta en la esquina ( Solo si hay oferta; si no, bórrala)
-      descripcion: "Se genera una tarjeta digital con diseños y estructuras más avanzadas, integracion de mapa.( Incluye 1 cambio mensual, dominio y hosting gratis)",
+      descripcion: "Creación de tu tarjeta digital con diseños y estructuras más avanzadas, integración de mapa (incluye 1 cambio mensual, dominio y hosting gratis).",
       precio: "$499 MXN"
     },
     {
       icono: "fa-solid fa-code",
-      nombre: "Pagina Web",
+      nombre: "Página Web",
       cinta: "Precio especial",
-      descripcion: "Creacion de su pagina web para aumentar el alcance de su negocio",
+      descripcion: "Creación de su pagina web para aumentar el alcance de su negocio.",
       //extra: "Texto destacado opcional bajo la descripción.",
       precio: "Desde $1,899 MXN"
     },
     {
-      icono: "fa-solid fa-code",
-      nombre: "Diseños personalizados",
+      icono: "fa-solid fa-palette",
+      nombre: "Diseños Personalizados",
       //cinta: "Precio especial",
-      descripcion: "Creacion de su pagina web o tarjeta digital interactiva con estilo propio.",
+      descripcion: "Creación de su página web o tarjeta digital interactiva con estilo propio.",
       extra: "Que tu diseño deje huella.",
       precio: "Desde $799"
     }
@@ -150,6 +150,6 @@ tituloRedes: "Conoce más de LUMIA Studio",
   tema: {
     principal: "#388DFF",
     texto: "#5E9FF7",
-    textoSuave: "#93BFFA"
+    textoSuave: "#478DFF"
   }
 };
