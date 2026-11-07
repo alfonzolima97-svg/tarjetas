@@ -127,9 +127,9 @@ window.TARJETA = {
     //{ texto: "Comunidad en Facebook", url: "https://facebook.com/usuario", icono: "fab fa-facebook", color: "#1877f2" }
  // ],
 
-    agenda: { texto: "Agenda tu cita", 
-    subtexto: "Da el primer paso en tu proceso",
-    url: "https://calendly.com/" },
+    //agenda: { texto: "Agenda tu cita", 
+    //subtexto: "Da el primer paso en tu proceso",
+    //url: "https://calendly.com/" },
 
   // Horario y mapa son opcionales: borra el bloque completo si no aplican.
  // horario: {
@@ -144,7 +144,7 @@ window.TARJETA = {
     // { nombre: "Facebook",  url: "https://www.facebook.com/", icono: "fab fa-facebook", color: "#1877f2" }
  //  ],
 
-  pie: "Programadores  |  LUMIA Studio",
+  pie: "LUMIA Studio",
 
   // Un solo color y todo el diseño se ajusta. Texto y textoSuave son opcionales.
   tema: {
