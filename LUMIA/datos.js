@@ -138,11 +138,11 @@ window.TARJETA = {
   //},
   //direccion: "Calle y número, Colonia, Ciudad, País",
 
-// tituloRedes: "Conoce más de LUMIA Studio",
- //  redes: [
-  //   { nombre: "Instagram", url: "https://instagram.com/", icono: "fab fa-instagram", color: "#e4405f" },
-    // { nombre: "Facebook",  url: "https://www.facebook.com/", icono: "fab fa-facebook", color: "#1877f2" }
- //  ],
+tituloRedes: "Conoce más de LUMIA Studio",
+ redes: [
+  { nombre: "Instagram", url: "https://www.instagram.com/lumia_studio.al?cplk=MWttOGh6bmRobG52dw%3D%3D&utm_source=qr", icono: "fab fa-instagram", color: "#e4405f" },
+    { nombre: "Facebook",  url: "https://www.facebook.com/profile.php?id=61596005414710", icono: "fab fa-facebook", color: "#1877f2" }
+ ],
 
   pie: "LUMIA Studio",
 
