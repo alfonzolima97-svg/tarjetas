@@ -1,8 +1,8 @@
 
 window.TARJETA = {
-  tituloPagina: "Alfonso Lima - Programador | LUMIA Studio",
-  nombre: "Alfonso Lima",
-  credenciales: ["Programador"],
+  tituloPagina: "LUMIA Studio",
+  nombre: "LUMIA Studio",
+  credenciales: ["Empresa de Programación"],
   marca: {
     nombre: "LUMIA Studio",
     descripcion: "Innovación que conecta, diseño que destaca."
@@ -138,13 +138,13 @@ window.TARJETA = {
   //},
   //direccion: "Calle y número, Colonia, Ciudad, País",
 
-tituloRedes: "Conoce más de LUMIA Studio",
-  redes: [
-    { nombre: "Instagram", url: "https://instagram.com/", icono: "fab fa-instagram", color: "#e4405f" },
-    { nombre: "Facebook",  url: "https://www.facebook.com/", icono: "fab fa-facebook", color: "#1877f2" }
-  ],
+// tituloRedes: "Conoce más de LUMIA Studio",
+ //  redes: [
+  //   { nombre: "Instagram", url: "https://instagram.com/", icono: "fab fa-instagram", color: "#e4405f" },
+    // { nombre: "Facebook",  url: "https://www.facebook.com/", icono: "fab fa-facebook", color: "#1877f2" }
+ //  ],
 
-  pie: "Alfonso Lima  |  LUMIA Studio",
+  pie: "Programadores  |  LUMIA Studio",
 
   // Un solo color y todo el diseño se ajusta. Texto y textoSuave son opcionales.
   tema: {
